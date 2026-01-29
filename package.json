@@ -1,0 +1,35 @@
+{
+  "name": "mpbg_landing",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000p\u0000b\u0000g\u0000_\u0000l\u0000a\u0000n\u0000d\u0000i\u0000n\u0000g\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --watch",
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --minify",
+    "build:js": "babel src/js/app.js --out-file dist/js/app.js --minified",
+    "serve": "live-server",
+    "dev": "npm-run-all --parallel dev:css serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguerrerof/mpbg_landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aguerrerof/mpbg_landing/issues"
+  },
+  "homepage": "https://github.com/aguerrerof/mpbg_landing#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "autoprefixer": "^10.4.23",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

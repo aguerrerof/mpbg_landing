@@ -1,0 +1,9 @@
+Options -Indexes
+<DirectoryMatch "^/.*/(src|src/img|src/js|src/css)">
+    Require all denied
+</DirectoryMatch>
+RewriteEngine On
+RewriteRule ^src(/.*)?$ - [F,L]
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
