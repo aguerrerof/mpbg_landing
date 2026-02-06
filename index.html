@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-EC">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +8,24 @@
 
   <meta name="description"
         content="MPBG Consulting ofrece desarrollo de software a medida, arquitectura técnica y staff augmentation para empresas que buscan crecer con soluciones tecnológicas sólidas." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="MPBG Consulting" />
+  <meta name="theme-color" content="#5b21b6" />
+
+  <link rel="canonical" href="https://mpbg.ec/" />
+
   <meta property="og:title" content="MPBG Consulting | Software a Medida y Staff Augmentation" />
   <meta property="og:description" content="Desarrollo de software, arquitectura técnica y staff augmentation para empresas en crecimiento." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mpbg.ec" />
+  <meta property="og:url" content="https://mpbg.ec/" />
   <meta property="og:image" content="https://mpbg.ec/assets/images/og_image.png" />
+  <meta property="og:locale" content="es_EC" />
+  <meta property="og:site_name" content="MPBG Consulting" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MPBG Consulting | Software a Medida y Staff Augmentation" />
+  <meta name="twitter:description" content="Desarrollo de software, arquitectura técnica y staff augmentation para empresas en crecimiento." />
+  <meta name="twitter:image" content="https://mpbg.ec/assets/images/og_image.png" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/brand/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon/favicon-32x32.png">
@@ -22,11 +35,41 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="dist/js/app.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-70D7PQ99DT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-70D7PQ99DT');
+  </script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "MPBG Consulting",
+      "url": "https://mpbg.ec/",
+      "logo": "https://mpbg.ec/assets/brand/logo.png",
+      "image": "https://mpbg.ec/assets/images/og_image.png",
+      "description": "Empresa de desarrollo de software a medida, arquitectura técnica y staff augmentation para empresas B2B.",
+      "areaServed": "EC",
+      "sameAs": [
+        "https://www.linkedin.com/company/mpbg-consulting",
+        "https://www.instagram.com/mpbg_consulting"
+      ],
+      "serviceType": [
+        "Desarrollo de software a medida",
+        "Arquitectura técnica",
+        "Staff augmentation"
+      ]
+    }
+  </script>
+
 </head>
 
 <body class="bg-gradient-to-b from-[#f6f3fb] to-white text-gray-800">
@@ -34,7 +77,7 @@
 <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur border-b">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="#">
-      <img src="assets/brand/logo.png" alt="MPBG Consulting" class="h-9">
+      <img src="assets/brand/logo.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
     </a>
 
     <div class="hidden md:flex gap-8 items-center text-sm font-medium">
@@ -85,6 +128,7 @@
   </div>
 </header>
 
+<main>
 <section class="bg-gradient-to-r from-purple-700 via-purple-600 to-blue-800 pt-40 pb-32">
   <div class="container mx-auto px-6 max-w-3xl">
     <h1 class="text-5xl font-bold text-white mb-6">
@@ -124,13 +168,13 @@
       <div class="grid grid-cols-2 gap-4">
         <img src="assets/images/another-meeting.jpeg"
              alt="Equipo de trabajo en desarrollo de software"
-             class="rounded-xl object-cover h-48 w-full">
+             class="rounded-xl object-cover h-48 w-full" loading="lazy" decoding="async">
         <img src="assets/images/meeting.jpeg"
              alt="Trabajo colaborativo en equipo técnico"
-             class="rounded-xl object-cover h-48 w-full">
+             class="rounded-xl object-cover h-48 w-full" loading="lazy" decoding="async">
         <img src="assets/images/office.jpeg"
              alt="Desarrollo de soluciones tecnológicas"
-             class="rounded-xl object-cover h-48 w-full col-span-2">
+             class="rounded-xl object-cover h-48 w-full col-span-2" loading="lazy" decoding="async">
       </div>
 
     </div>
@@ -246,12 +290,13 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer class="bg-blue-950 text-gray-300 py-12">
   <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
 
     <div class="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-      <img src="assets/brand/logo.png" alt="MPBG Consulting" class="h-10">
+      <img src="assets/brand/logo.png" alt="MPBG Consulting" class="h-10" loading="lazy" decoding="async">
       <p class="text-sm text-gray-400">Conectamos los puntos, tú dominas el mercado.</p>
       <p class="text-sm text-gray-500">© 2026 MPBG Consulting</p>
     </div>

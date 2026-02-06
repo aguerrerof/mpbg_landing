@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /assets/
-
-Allow: /assets/images/og_image.png
+Allow: /
 
 Sitemap: https://mpbg.ec/sitemap.xml
