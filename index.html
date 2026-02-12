@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-EC">
 <head>
   <meta charset="UTF-8" />
@@ -76,15 +76,15 @@
 
 <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur border-b">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#">
-      <img src="assets/brand/logo.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
+    <a href="/">
+      <img src="/assets/brand/logo.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
     </a>
 
     <div class="hidden md:flex gap-8 items-center text-sm font-medium">
-      <a href="#servicios" class="hover:text-purple-600">Servicios</a>
-      <a href="#nosotros" class="hover:text-purple-600">Nosotros</a>
-      <a href="#testimonios" class="hover:text-purple-600">Testimonios</a>
-      <a href="#contacto" class="hover:text-purple-600">Contacto</a>
+      <a href="/#nosotros" class="hover:text-purple-600">Nosotros</a>
+      <a href="/#servicios" class="hover:text-purple-600">Servicios</a>
+      <a href="/#testimonios" class="hover:text-purple-600">Testimonios</a>
+      <a href="/#contacto" class="hover:text-purple-600">Contacto</a>
 
       <a href="https://www.linkedin.com/company/mpbg-consulting" target="_blank" aria-label="LinkedIn"
          class="text-gray-500 hover:text-purple-600 transition">
@@ -110,7 +110,7 @@
       </a>
     </div>
 
-    <button id="menu-btn" class="md:hidden text-gray-700">
+    <button id="menu-btn" class="md:hidden text-gray-700" aria-label="Abrir menú">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"/>
@@ -120,13 +120,14 @@
 
   <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
     <div class="px-6 py-6 flex flex-col gap-4 text-sm font-medium">
-      <a href="#nosotros" class="mobile-link">Nosotros</a>
-      <a href="#servicios" class="mobile-link">Servicios</a>
-      <a href="#testimonios" class="mobile-link">Testimonios</a>
-      <a href="#contacto" class="mobile-link">Contacto</a>
+      <a href="/#nosotros" class="mobile-link">Nosotros</a>
+      <a href="/#servicios" class="mobile-link">Servicios</a>
+      <a href="/#testimonios" class="mobile-link">Testimonios</a>
+      <a href="/#contacto" class="mobile-link">Contacto</a>
     </div>
   </div>
 </header>
+
 
 <main>
 <section class="bg-gradient-to-r from-purple-700 via-purple-600 to-blue-800 pt-40 pb-32">
@@ -187,53 +188,53 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">⚙️</div>
+      <a href="/servicios/software-a-medida" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#9881;&#65039;</div>
         <h3 class="font-semibold mb-2">Software a medida</h3>
         <p class="text-sm text-gray-600">
           Desarrollo de soluciones diseñadas según las necesidades reales del negocio.
         </p>
-      </div>
+      </a>
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">🧩</div>
+      <a href="/servicios/arquitectura-tecnica" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#129513;</div>
         <h3 class="font-semibold mb-2">Arquitectura técnica</h3>
         <p class="text-sm text-gray-600">
           Definición de arquitecturas robustas que soportan crecimiento y operación a largo plazo.
         </p>
-      </div>
+      </a>
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">♻️</div>
+      <a href="/servicios/modernizacion" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#9851;&#65039;</div>
         <h3 class="font-semibold mb-2">Modernización</h3>
         <p class="text-sm text-gray-600">
           Actualización de sistemas existentes sin interrumpir la operación.
         </p>
-      </div>
+      </a>
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">🧠</div>
+      <a href="/servicios/consultoria" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#129504;</div>
         <h3 class="font-semibold mb-2">Consultoría</h3>
         <p class="text-sm text-gray-600">
           Acompañamiento técnico para decisiones bien fundamentadas.
         </p>
-      </div>
+      </a>
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">🤖</div>
+      <a href="/servicios/automatizacion-ia" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#129302;</div>
         <h3 class="font-semibold mb-2">Automatización con IA</h3>
         <p class="text-sm text-gray-600">
           Automatización inteligente de procesos para mejorar eficiencia.
         </p>
-      </div>
+      </a>
 
-      <div class="bg-white p-8 rounded-xl border">
-        <div class="text-4xl mb-4">👥</div>
+      <a href="/servicios/staff-augmentation" class="block bg-white p-8 rounded-xl border hover:border-purple-300 hover:shadow-md transition">
+        <div class="text-4xl mb-4">&#128101;</div>
         <h3 class="font-semibold mb-2">Staff Augmentation</h3>
         <p class="text-sm text-gray-600">
           Ingenieros que se integran a tu equipo como uno más desde el primer día.
         </p>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -247,8 +248,8 @@
 
       <div class="bg-white p-8 rounded-xl border">
         <p class="text-gray-600 mb-6">
-          “Recursivos, puntuales y profesionales. MPBG nos ayudó a ordenar nuestros procesos con un
-          software alineado a nuestras necesidades reales.”
+          "Recursivos, puntuales y profesionales. MPBG nos ayudó a ordenar nuestros procesos con un
+          software alineado a nuestras necesidades reales."
         </p>
         <p class="font-semibold text-sm">Gerencia de Operaciones</p>
         <p class="text-xs text-gray-500">Empresa de servicios</p>
@@ -256,7 +257,7 @@
 
       <div class="bg-white p-8 rounded-xl border">
         <p class="text-gray-600 mb-6">
-          “Se integraron rápidamente a nuestro equipo y entendieron el negocio desde el primer momento.”
+          "Se integraron rápidamente a nuestro equipo y entendieron el negocio desde el primer momento."
         </p>
         <p class="font-semibold text-sm">CTO</p>
         <p class="text-xs text-gray-500">Startup tecnológica</p>
@@ -264,7 +265,7 @@
 
       <div class="bg-white p-8 rounded-xl border">
         <p class="text-gray-600 mb-6">
-          “Un partner confiable para proyectos donde la estabilidad y la calidad técnica son críticas.”
+          "Un partner confiable para proyectos donde la estabilidad y la calidad técnica son críticas."
         </p>
         <p class="font-semibold text-sm">Líder de Tecnología</p>
         <p class="text-xs text-gray-500">Sector financiero</p>
@@ -331,3 +332,9 @@
 
 </body>
 </html>
+
+
+
+
+
+

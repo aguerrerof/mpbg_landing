@@ -1,6 +1,8 @@
 module.exports = {
   content: [
     "./index.html",
+    "./convocatoria.html",
+    "./servicios/**/*.html",
     "./src/js/**/*.js"
   ],
   theme: {

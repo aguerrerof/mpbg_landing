@@ -1,4 +1,4 @@
-
+﻿
 Options -Indexes
 
 <FilesMatch "\.(env|ini|log|conf|sql|sh|bak|old|swp)$">
@@ -14,7 +14,7 @@ Options -Indexes
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Imágenes
+  # ImÃ¡genes
   ExpiresByType image/jpg  "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png  "access plus 1 year"
@@ -49,3 +49,5 @@ AddType image/webp .webp
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
+
+
