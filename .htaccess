@@ -37,6 +37,9 @@ AddType image/webp .webp
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Redirect /servicios to home services section
+  RewriteRule ^servicios/?$ /#servicios [R=301,L]
+
   # Redirect explicit index.html to root
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
   RewriteRule ^index\.html$ / [R=301,L]
