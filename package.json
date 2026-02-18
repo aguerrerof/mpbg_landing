@@ -7,6 +7,7 @@
     "dev:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --watch",
     "build:css": "tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --minify",
     "build:js": "babel src/js/app.js --out-file dist/js/app.js --minified",
+    "build": "npm-run-all build:css build:js",
     "serve": "live-server",
     "dev": "npm-run-all --parallel dev:css serve"
   },
