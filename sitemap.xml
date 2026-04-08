@@ -7,10 +7,28 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mpbg.ec/convocatoria</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mpbg.ec/convocatorias/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mpbg.ec/convocatorias/fullstack</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mpbg.ec/convocatorias/qa</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mpbg.ec/convocatoria</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://mpbg.ec/servicios/software-a-medida</loc>

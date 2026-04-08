@@ -12,6 +12,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
   <title>MPBG Consulting | Software a Medida y Staff Augmentation B2B</title>
 
   <meta name="description"
@@ -39,11 +43,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon/favicon-16x16.png">
 
-  <link rel="stylesheet" href="dist/css/styles.css?v=20260305-2">
-  <link rel="stylesheet" href="/assets/css/fonts.css?v=20260305-2">
+  <link rel="stylesheet" href="dist/css/styles.css?v=20260408-1">
+  <link rel="stylesheet" href="/assets/css/fonts.css?v=20260408-1">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script src="dist/js/app.js?v=20260305-2" defer></script>
+  <script src="dist/js/app.js?v=20260408-1" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-70D7PQ99DT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -94,6 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="/#servicios" class="hover:text-purple-600">Servicios</a>
       <a href="/#testimonios" class="hover:text-purple-600">Testimonios</a>
       <a href="/#contacto" class="hover:text-purple-600">Contacto</a>
+      <a href="/convocatorias/" class="hover:text-purple-600 font-semibold">Convocatorias</a>
 
       <a href="https://www.linkedin.com/company/mpbg-consulting" target="_blank" aria-label="LinkedIn"
          class="text-gray-500 hover:text-purple-600 transition">
@@ -127,12 +132,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </button>
   </nav>
 
-  <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
     <div class="px-6 py-6 flex flex-col gap-4 text-sm font-medium">
       <a href="/#nosotros" class="mobile-link">Nosotros</a>
       <a href="/#servicios" class="mobile-link">Servicios</a>
       <a href="/#testimonios" class="mobile-link">Testimonios</a>
       <a href="/#contacto" class="mobile-link">Contacto</a>
+      <a href="/convocatorias/" class="mobile-link">Convocatorias</a>
     </div>
   </div>
 </header>
@@ -147,10 +153,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="text-xl text-purple-100 mb-10">
       Diseñamos soluciones tecnológicas sólidas, pensadas para acompañar el crecimiento real del negocio.
     </p>
-    <a href="#contacto"
-       class="inline-block bg-white text-purple-700 px-8 py-3 rounded-lg font-medium hover:bg-purple-50 transition">
-      Agendar una llamada
-    </a>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#contacto"
+         class="inline-flex items-center justify-center bg-white text-purple-700 px-8 py-3 rounded-lg font-medium hover:bg-purple-50 transition">
+        Agendar una llamada
+      </a>
+      <a href="/convocatorias/"
+         class="inline-flex items-center justify-center border border-white/80 text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+        Ver convocatorias abiertas
+      </a>
+    </div>
   </div>
 </section>
 
