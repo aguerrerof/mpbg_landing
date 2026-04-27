@@ -1,6 +1,18 @@
+@import url('../../node_modules/@fontsource/inter/300.css');
+@import url('../../node_modules/@fontsource/inter/400.css');
+@import url('../../node_modules/@fontsource/inter/500.css');
+@import url('../../node_modules/@fontsource/inter/600.css');
+@import url('../../node_modules/@fontsource/inter/700.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
 html {
   scroll-behavior: smooth;
 }
