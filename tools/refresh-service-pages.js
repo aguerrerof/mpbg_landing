@@ -14,7 +14,7 @@ const sharedHeader = `  <body class="bg-[#0f0720] text-gray-100">
       <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
     </a>
     <div class="hidden md:flex gap-8 items-center text-sm font-medium text-white/85">
-      <a href="/#nosotros" class="hover:text-white">Nosotros</a>
+      <a href="/#Inicio" class="hover:text-white">Inicio</a>
       <a href="/#servicios" class="hover:text-white">Servicios</a>
       <a href="/#casos-de-exito" class="hover:text-white">Casos de éxito</a>
       <a href="/#contacto" class="hover:text-white">Contacto</a>
@@ -23,7 +23,7 @@ const sharedHeader = `  <body class="bg-[#0f0720] text-gray-100">
   </nav>
   <div id="mobile-menu" class="md:hidden hidden bg-[#12091f] border-t border-white/10">
     <div class="px-6 py-6 flex flex-col gap-4 text-sm font-medium text-white/85">
-      <a href="/#nosotros" class="mobile-link">Nosotros</a>
+      <a href="/#Inicio" class="mobile-link">Inicio</a>
       <a href="/#servicios" class="mobile-link">Servicios</a>
       <a href="/#casos-de-exito" class="mobile-link">Casos de éxito</a>
       <a href="/#contacto" class="mobile-link">Contacto</a>
