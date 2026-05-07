@@ -53,15 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const getHeroLightboxSource = trigger => {
-    const activeSlide = trigger.querySelector('[data-hero-slide].is-active img');
-
-    return {
-      source: activeSlide ? activeSlide.getAttribute('src') || activeSlide.currentSrc || trigger.dataset.fullsrc || '' : trigger.dataset.fullsrc || '',
-      alt: activeSlide ? activeSlide.getAttribute('alt') || trigger.dataset.alt || '' : trigger.dataset.alt || '',
-    };
-  };
-
   let heroIndex = 0;
   let heroTimer = null;
 
@@ -102,11 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.js-zoom-image').forEach(trigger => {
     trigger.addEventListener('click', () => {
-      const lightboxData = trigger.closest('#hero-rotator')
-        ? getHeroLightboxSource(trigger)
-        : { source: trigger.dataset.fullsrc || '', alt: trigger.dataset.alt || '' };
-
-      openLightbox(lightboxData.source, lightboxData.alt);
+      openLightbox(trigger.dataset.fullsrc || '', trigger.dataset.alt || '');
     });
   });
 
