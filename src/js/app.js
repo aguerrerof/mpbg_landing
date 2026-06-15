@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const calendlyEventName = 'calendly.event_scheduled';
+
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -113,5 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.key === 'Escape') {
       closeLightbox();
     }
+  });
+
+  // Calendly emits booking events via postMessage; forward the scheduled event to GTM.
+  window.addEventListener('message', event => {
+    if (!event?.data || typeof event.data !== 'object') return;
+
+    const sourceName = event.origin || '';
+    const isCalendlyMessage = sourceName.includes('calendly.com') || sourceName.includes('calendly');
+    const isScheduledEvent = event.data.event === 'calendly.event_scheduled';
+
+    if (!isCalendlyMessage || !isScheduledEvent) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: calendlyEventName,
+      calendly_event_name: 'event_scheduled',
+    });
   });
 });
