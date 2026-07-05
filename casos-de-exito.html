@@ -26,35 +26,70 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon/favicon-16x16.png">
-  <link rel="stylesheet" href="/dist/css/styles.css?v=202606241537">
+  <link rel="stylesheet" href="/dist/css/styles.css?v=202607061040">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script src="/dist/js/app.js?v=202606241537" defer></script>
+  <script src="/dist/js/app.js?v=202607061040" defer></script>
 </head>
 <body class="bg-[#0f0720] text-gray-100">
   <header class="fixed top-0 w-full z-50 bg-[#0a0514]/80 backdrop-blur-xl border-b border-white/5">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="transition-transform hover:scale-105 active:scale-95">
-        <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
-      </a>
-      <div class="hidden md:flex gap-1 items-center text-[17px] font-medium text-white/70">
-        <a href="/#servicios" class="group flex items-center gap-2 px-4 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Servicios</a>
-        <div class="h-6 w-[1px] bg-white/10 mx-2"></div>
-        <a href="/#contacto" class="flex items-center gap-2 px-5 py-2.5 bg-white text-black rounded-xl font-bold hover:bg-purple-400 transition-all active:scale-95 shadow-lg shadow-white/5">Agendar</a>
-      </div>
-      <button id="menu-btn" class="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white">
-        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="transition-transform hover:scale-105 active:scale-95">
+      <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
+    </a>
+
+    <div class="hidden md:flex gap-1 items-center text-[17px] font-medium text-white/70">
+      <a href="/#servicios" class="group flex items-center gap-2 px-4 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-70 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
-      </button>
-    </nav>
-      <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-[#0a0514] backdrop-blur-2xl">
-      <div class="px-6 py-8 flex flex-col gap-3">
-        <a href="/#servicios" class="mobile-link group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 text-white/90">Servicios</a>
-        <a href="/#contacto" class="mobile-link group flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/20 text-white font-bold">Agendar Reunión</a>
-      </div>
+        Servicios
+      </a>
+      <a href="/casos-de-exito" class="group flex items-center gap-2 px-4 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-70 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Casos de éxito
+      </a>
+      <div class="h-6 w-[1px] bg-white/10 mx-2"></div>
+      <a href="/#contacto" class="flex items-center gap-2 px-5 py-2.5 bg-white text-black rounded-xl font-bold hover:bg-purple-400 transition-all active:scale-95 shadow-lg shadow-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        Agendar
+      </a>
     </div>
-  </header>
+
+    <button id="menu-btn" class="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-[#0a0514] backdrop-blur-2xl">
+    <div class="px-6 py-8 flex flex-col gap-3">
+      <a href="/#servicios" class="mobile-link group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 text-white/90">
+        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        </div>
+        Servicios
+      </a>
+      <a href="/casos-de-exito" class="mobile-link group flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 text-white/90">
+        <div class="p-2 rounded-lg bg-green-500/10 text-green-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        Casos de éxito
+      </a>
+      <a href="/#contacto" class="mobile-link group flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/20 text-white font-bold">
+        <div class="p-2 rounded-lg bg-purple-600 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        Agendar Reunión
+      </a>
+    </div>
+  </div>
+</header>
 
   <main class="pt-24">
     <section class="relative overflow-hidden py-24 bg-[#160b2d] text-white">
