@@ -1,56 +1,66 @@
 Options -Indexes
 
 <FilesMatch "\.(env|ini|log|conf|sql|sh|bak|old|swp)$">
-  Require all denied
+    Require all denied
 </FilesMatch>
+
 <IfModule mod_headers.c>
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set X-XSS-Protection "1; mode=block"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 <IfModule mod_expires.c>
-  ExpiresActive On
+    ExpiresActive On
 
-  # Imágenes
-  ExpiresByType image/jpg  "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png  "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
+    # Imágenes y Assets
+    ExpiresByType image/jpg         "access plus 1 year"
+    ExpiresByType image/jpeg        "access plus 1 year"
+    ExpiresByType image/png         "access plus 1 year"
+    ExpiresByType image/webp        "access plus 1 year"
+    ExpiresByType image/svg+xml     "access plus 1 year"
+    ExpiresByType text/css          "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
 
 AddType image/webp .webp
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
-  <FilesMatch "\.(html)$">
-    Header set Cache-Control "no-cache, must-revalidate"
-  </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
 </IfModule>
 
 <IfModule mod_rewrite.c>
-  RewriteEngine On
+    RewriteEngine On
 
-  # Redirect /servicios to home services section
-  RewriteRule ^servicios/?$ /#servicios [R=301,L]
+    # Redirect /servicios to home services section
+    RewriteRule ^servicios/?$ /#servicios [R=301,L]
 
-  # Redirect explicit index.html to root
-  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
-  RewriteRule ^index\.html$ / [R=301,L]
+    # Redirect explicit index.html to root
+    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+    RewriteRule ^index\.html$ / [R=301,L]
 
-  # Redirect .html URLs to extensionless URLs
-  RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
-  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+    # Redirect .html URLs to extensionless URLs
+    RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+    RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
-  # Internally rewrite extensionless URLs to existing .html files
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.+?)/?$ $1.html [L]
+    # Internally rewrite extensionless URLs to existing .html files
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+
+    # [NUEVO] Si no es un directorio, ni un archivo, ni existe como .html -> Redirigir al landing con 302 (o 301 si prefieres permanente)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.html !-f
+    RewriteRule ^(.*)$ / [R=302,L]
 </IfModule>
+
+# [NUEVO] Respaldo nativo de Apache para errores de recursos directos (ej. una imagen vieja que ya no existe)
+ErrorDocument 404 /

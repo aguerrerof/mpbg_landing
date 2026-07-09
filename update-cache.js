@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
-// GENERACIÓN AUTOMÁTICA: Crea un string basado en YYYYMMDDHHmm
 const now = new Date();
 const autoVersion = now.getFullYear() +
     String(now.getMonth() + 1).padStart(2, '0') +
@@ -10,8 +8,6 @@ const autoVersion = now.getFullYear() +
     String(now.getMinutes()).padStart(2, '0');
 
 const BASE_DIR = './';
-
-// Regex que detecta la ruta con o sin slash inicial y con o sin versión previa
 const assets = [
   { 
     name: 'CSS',
@@ -46,7 +42,6 @@ function updateFile(filePath) {
   assets.forEach(asset => {
     if (asset.regex.test(content)) {
       content = content.replace(asset.regex, (match) => {
-        // Mantenemos el slash inicial si el archivo original lo tenía (ej: /dist/...)
         const prefix = match.startsWith('/') ? '/' : '';
         return prefix + asset.replacement;
       });

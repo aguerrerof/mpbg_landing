@@ -13,19 +13,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mpbg.ec/convocatoria</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://mpbg.ec/servicios/software-a-medida</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mpbg.ec/servicios/modernizacion</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
