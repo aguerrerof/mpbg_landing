@@ -1,0 +1,20 @@
+# MPBG Consulting
+
+Plataforma oficial de MPBG Consulting. Proporcionamos servicios avanzados de consultoría tecnológica, reclutamiento especializado, staff augmentation y desarrollo de soluciones de software a medida.
+
+## Servicios Principales
+
+- [Software a Medida](https://mpbg.ec/servicios/software-a-medida.html) - Diseño y desarrollo de arquitecturas de software eficientes, APIs asíncronas y automatización de flujos de trabajo.
+- [Staff Augmentation](https://mpbg.ec/servicios/staff-augmentation.html) - Ampliación de equipos técnicos con profesionales calificados para acelerar proyectos de desarrollo.
+- [IT Recruiting](https://mpbg.ec/servicios/it-recruiting.html) - Reclutamiento y selección especializada de talento humano en el sector de tecnología y desarrollo.
+- [Consultoría Tecnológica](https://mpbg.ec/) - Optimización de rendimiento de plataformas, auditorías y transformación digital empresarial.
+
+## Casos de Éxito y Recursos
+
+- [Casos de Éxito](https://mpbg.ec/casos-de-exito.html) - Portafolio de proyectos ejecutados, soluciones de infraestructura implementadas e historias de impacto con nuestros clientes.
+- [Brochure Corporativo](https://mpbg.ec/brochure.html) - Catálogo completo de capacidades, metodologías de trabajo y modelo de servicios de la consultora.
+
+## Canales Oficiales y Redes
+
+- [LinkedIn](https://www.linkedin.com/company/mpbg-consulting) - Perfil corporativo institucional en LinkedIn.
+- [Instagram](https://www.instagram.com/mpbg_consulting) - Cuenta oficial con novedades y proyectos de la firma.
