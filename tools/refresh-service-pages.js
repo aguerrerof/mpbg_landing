@@ -10,9 +10,13 @@ const sharedHeader = `  <body class="bg-[#0f0720] text-gray-100">
 
 <header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/10">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="/">
-      <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
-    </a>
+    <a href="/" class="transition-transform hover:scale-105 active:scale-95">
+        <picture>
+          <source srcset="/assets/brand/logo_white.webp" type="image/webp">
+          <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9 w-auto" loading="eager"
+            fetchpriority="high" decoding="async" width="180" height="36"> <!-- Ajusta el width real de tu logo -->
+        </picture>
+      </a>
     <div class="hidden md:flex gap-8 items-center text-sm font-medium text-white/85">
       <a href="/#servicios" class="hover:text-white">Servicios</a>
       <a href="/#tech-stack" class="hover:text-white">Tech Stack</a>

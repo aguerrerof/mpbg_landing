@@ -2,6 +2,10 @@
 <html lang="es-EC">
 
 <head>
+  <!-- Preconnect para acelerar la conexión a servicios externos -->
+  <link rel="preconnect" href="https://assets.calendly.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -15,10 +19,6 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
 
   <title>MPBG Consulting | Software a Medida y Staff Augmentation B2B</title>
 
@@ -49,17 +49,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon/favicon-16x16.png">
 
-  <link rel="stylesheet" href="dist/css/styles.css?v=202607101131">
+  <link rel="stylesheet" href="dist/css/styles.css?v=202607211144">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script src="dist/js/app.js?v=202607101131" defer></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-70D7PQ99DT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-70D7PQ99DT');
-  </script>
+  <script src="dist/js/app.js?v=202607211144" defer></script>
 
   <script type="application/ld+json">
     {
@@ -91,7 +83,11 @@
   <header class="fixed top-0 w-full z-50 bg-[#0a0514]/80 backdrop-blur-xl border-b border-white/5">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="/" class="transition-transform hover:scale-105 active:scale-95">
-        <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
+        <picture>
+          <source srcset="/assets/brand/logo_white.webp" type="image/webp">
+          <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9 w-auto" loading="eager"
+            fetchpriority="high" decoding="async" width="180" height="36">
+        </picture>
       </a>
 
       <div class="hidden md:flex gap-1 items-center text-[17px] font-medium text-white/70">
@@ -173,223 +169,417 @@
   </header>
 
   <main class="flex-grow">
-    <section class="relative overflow-hidden bg-[#0f162b] py-24 w-full" id="servicios">
-      <div
-        class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.16),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.16),transparent_30%)]">
-      </div>
-      <div
-        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent">
-      </div>
+    <section class="relative overflow-hidden bg-[#0f162b] py-20 w-full" id="servicios">
+      <div class="w-full max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-16 2xl:px-24 relative group">
+        <div class="relative w-full">
+          <div id="service-carousel"
+            class="flex flex-nowrap overflow-x-auto scroll-smooth rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent backdrop-blur-md shadow-2xl snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
 
-      <div class="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-12 relative z-10">
-        <div
-          class="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0d1327]/80 shadow-2xl shadow-black/50 backdrop-blur-xl w-full">
-          <div
-            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.15),transparent_50%),radial-gradient(circle_at_bottom,rgba(168,85,247,0.12),transparent_40%)]">
-          </div>
-
-          <div class="relative z-10 p-8 sm:p-10 lg:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            <div class="flex flex-col justify-center">
-              <div class="mb-6">
-                <span
-                  class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-purple-200 backdrop-blur-md">
-                  Tecnología en tu idioma
-                </span>
+            <article class="snap-center flex-shrink-0 w-full p-6 md:p-10 lg:p-12 flex flex-col justify-between">
+              <div class="flex flex-col gap-6 xl:gap-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                  <div class="lg:w-1/2 text-center lg:text-left">
+                    <span
+                      class="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-blue-300 mb-4 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                      Desarrollo de software a la medida
+                    </span>
+                    <h3 class="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                      Soluciones de software <br class="hidden lg:block">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">diseñadas
+                        para escalar</span>
+                    </h3>
+                    <p class="mt-4 text-base xl:text-lg text-blue-100/80 leading-relaxed">
+                      No adaptamos tu negocio a una herramienta predefinida. Construimos ecosistemas digitales a medida
+                      utilizando el stack tecnológico óptimo para tus objetivos de negocio.
+                    </p>
+                  </div>
+                  <div class="lg:w-1/2 w-full relative">
+                    <div
+                      class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-3xl blur-lg opacity-30">
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)"
+                        srcset="/assets/images/servicios/software-a-medida-banner.webp" type="image/webp">
+                      <source media="(min-width: 769px)" srcset="/assets/images/servicios/software-a-medida-banner.webp"
+                        type="image/webp">
+                      <img src="/assets/images/servicios/software-a-medida-banner.jpg"
+                        alt="Equipo desarrollando software a medida"
+                        class="relative h-[220px] md:h-[300px] lg:h-[340px] xl:h-[400px] w-full rounded-2xl object-cover shadow-2xl border border-white/10"
+                        loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
+                    </picture>
+                  </div>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-blue-500/10 text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Dominio Políglota</h4>
+                      </div>
+                      <p class="text-blue-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Especialistas en
+                        diversos lenguajes y paradigmas, seleccionando la tecnología por su rendimiento y escalabilidad.
+                      </p>
+                    </div>
+                    <ul class="space-y-3 text-blue-100 text-lg">
+                      <li><strong class="text-blue-400 font-bold">01.</strong> Stack Agnóstico adaptado al problema.
+                      </li>
+                      <li><strong class="text-blue-400 font-bold">02.</strong> Ingeniería E2E (BD a UX/UI).</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Garantía de Evolución</h4>
+                      </div>
+                      <p class="text-blue-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Entregamos
+                        software corporativo con estándares internacionales. Construimos activos digitales, no solo
+                        código.</p>
+                    </div>
+                    <ul class="space-y-3 text-blue-100 text-lg">
+                      <li><strong class="text-indigo-400 font-bold">03.</strong> QA Riguroso manual y automático.</li>
+                      <li><strong class="text-indigo-400 font-bold">04.</strong> Arquitecturas Limpias y modulares.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-5xl leading-[1.1] mb-6">
-                Traducimos tus metas de negocio en soluciones reales.
-              </h2>
-              <div class="mb-8 w-12 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"></div>
-              <p class="text-base sm:text-lg leading-relaxed text-purple-100/90 mb-10 max-w-lg">
-                Guiar tu empresa hacia la transformación digital requiere una planeación rigurosa. Antes de evaluar
-                presupuestos corporativos, <strong class="font-semibold text-white">te ofrecemos una consultoría técnica
-                  sin costo.</strong>
-              </p>
-
-              <div class="flex flex-col sm:flex-row items-center gap-6 mt-2">
+              <div class="flex justify-center mt-6">
                 <a href="/#contacto"
-                  class="group relative flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-black shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(255,255,255,0.3)]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black/80" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <line x1="16" y1="2" x2="16" y2="6" stroke-linecap="round" stroke-linejoin="round" />
-                    <line x1="8" y1="2" x2="8" y2="6" stroke-linecap="round" stroke-linejoin="round" />
-                    <line x1="3" y1="10" x2="21" y2="10" stroke-linecap="round" stroke-linejoin="round" />
+                  class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  Agendar consultoría técnica
-                </a>
-
-                <a href="/casos-de-exito"
-                  class="group flex items-center justify-center gap-2 text-sm font-medium text-purple-200/80 transition-colors hover:text-white">
-                  Ver resultados reales
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
+                  Agendar Reunión Técnica
                 </a>
               </div>
-            </div>
+            </article>
 
-            <div class="relative group w-full max-w-7xl mx-auto p-4"> <!-- Main Absolute Wrapper -->
+            <article class="snap-center flex-shrink-0 w-full p-6 md:p-10 lg:p-12 flex flex-col justify-between">
+              <div class="flex flex-col gap-6 xl:gap-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                  <div class="lg:w-1/2 text-center lg:text-left">
+                    <span
+                      class="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-purple-300 mb-4 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                      Staff Augmentation
+                    </span>
+                    <h3 class="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                      Potencia tus equipos con <br class="hidden lg:block">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">talento
+                        tecnológico de alto impacto</span>
+                    </h3>
+                    <p class="mt-4 text-base xl:text-lg text-purple-100/80 leading-relaxed">
+                      Integra talento senior altamente calificado que acelera el time-to-market con autonomía, gobierno
+                      técnico y arquitectura orientada a resultados corporativos.
+                    </p>
+                  </div>
+                  <div class="lg:w-1/2 w-full relative">
+                    <div
+                      class="absolute -inset-2 bg-gradient-to-r from-purple-600 to-pink-500 rounded-3xl blur-lg opacity-30">
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)"
+                        srcset="/assets/images/servicios/staff-augmentation-banner.webp" type="image/webp">
+                      <source media="(min-width: 769px)"
+                        srcset="/assets/images/servicios/staff-augmentation-banner.webp" type="image/webp">
 
-              <!-- 1. The Contiguous "One Big Element" Carousel structure -->
-              <div id="service-carousel"
-                class="flex flex-nowrap overflow-x-auto scroll-smooth rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-2xl no-scrollbar snap-x snap-mandatory">
-
-
-
-                <!-- Article 2: Software a medida -->
-                <article
-                  class="snap-start flex-shrink-0 w-full p-10 md:p-16 flex flex-col items-center text-center border-l border-white/5">
+                      <img src="/assets/images/servicios/staff-augmentation-banner.jpg"
+                        alt="Equipo ampliado con talento técnico"
+                        class="relative h-[220px] md:h-[300px] lg:h-[340px] xl:h-[400px] w-full rounded-2xl object-cover shadow-2xl border border-white/10"
+                        loading="lazy" decoding="async" width="1200" height="800">
+                    </picture>
+                  </div>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
                   <div
-                    class="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-400 mb-8 shrink-0 shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 class="text-3xl font-extrabold text-white mb-6 tracking-tight">Desarrollo de Software a medida</h3>
-                  <div class="flex flex-col gap-3 text-left w-full max-w-md mb-10 mx-auto">
-                    <div class="flex items-start gap-3 text-lg text-cyan-100/80">
-                      <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50"></span>
-                      <span>Arquitecturas 100% escalables.</span>
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Talento de Alto Impacto</h4>
+                      </div>
+                      <p class="text-purple-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Validación
+                        técnica rigurosa. No sumamos puestos, sumamos criterio arquitectónico y resolución experta para
+                        tus retos.</p>
                     </div>
-                    <div class="flex items-start gap-3 text-lg text-cyan-100/80">
-                      <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50"></span>
-                      <span>Autonomía total sobre tu ecosistema digital.</span>
-                    </div>
+                    <ul class="space-y-3 text-purple-100 text-lg">
+                      <li><strong class="text-purple-400 font-bold">01.</strong> Aporte Inmediato (Perfiles Senior y
+                        Lead).</li>
+                      <li><strong class="text-purple-400 font-bold">02.</strong> Cultura Agile y CI/CD de alto
+                        rendimiento.</li>
+                    </ul>
                   </div>
-                  <a href="/servicios/software-a-medida"
-                    class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-cyan-400 hover:text-cyan-300 transition-colors bg-cyan-500/10 px-6 py-3 rounded-full border border-cyan-500/20 shadow-inner">
-                    Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </article>
-                <!-- Article 1: Automatización con IA (Full Width Slide) -->
-                <article class="snap-start flex-shrink-0 w-full p-10 md:p-16 flex flex-col items-center text-center">
                   <div
-                    class="flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-500/15 text-purple-400 mb-8 shrink-0 shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-                    </svg>
-                  </div>
-                  <h3 class="text-3xl font-extrabold text-white mb-6 tracking-tight">Automatización con IA</h3>
-                  <div class="flex flex-col gap-3 text-left w-full max-w-md mb-10 mx-auto">
-                    <div class="flex items-start gap-3 text-lg text-purple-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>
-                      <span>Reducción de tareas manuales repetitivas.</span>
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-pink-500/10 text-pink-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Escalabilidad Sin Riesgo</h4>
+                      </div>
+                      <p class="text-purple-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Flexibilidad
+                        para escalar tu capacidad técnica corporativa mitigando fricciones operativas y costos de
+                        contratación.</p>
                     </div>
-                    <div class="flex items-start gap-3 text-lg text-purple-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-purple-500 shadow-lg shadow-purple-500/50"></span>
-                      <span>Integración de ML a tus flujos actuales.</span>
-                    </div>
+                    <ul class="space-y-3 text-purple-100 text-lg">
+                      <li><strong class="text-pink-400 font-bold">03.</strong> Staffing Dinámico adaptado al roadmap.
+                      </li>
+                      <li><strong class="text-pink-400 font-bold">04.</strong> Enfoque absoluto en la calidad del
+                        delivery.</li>
+                    </ul>
                   </div>
-                  <a href="/servicios/automatizacion-ia.html"
-                    class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-purple-400 hover:text-purple-300 transition-colors bg-purple-500/10 px-6 py-3 rounded-full border border-purple-500/20 shadow-inner">
-                    Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </article>
-                <!-- Article 3: Staff Augmentation -->
-                <article
-                  class="snap-start flex-shrink-0 w-full p-10 md:p-16 flex flex-col items-center text-center border-l border-white/5">
-                  <div
-                    class="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400 mb-8 shrink-0 shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 class="text-3xl font-extrabold text-white mb-6 tracking-tight">Staff Augmentation</h3>
-                  <div class="flex flex-col gap-3 text-left w-full max-w-md mb-10 mx-auto">
-                    <div class="flex items-start gap-3 text-lg text-emerald-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50"></span>
-                      <span>Talento integrado desde el día uno.</span>
-                    </div>
-                    <div class="flex items-start gap-3 text-lg text-emerald-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50"></span>
-                      <span>Perfiles SSr y Sr altamente calificados.</span>
-                    </div>
-                  </div>
-                  <a href="/servicios/staff-augmentation.html"
-                    class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-emerald-400 hover:text-emerald-300 transition-colors bg-emerald-500/10 px-6 py-3 rounded-full border border-emerald-500/20 shadow-inner">
-                    Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </article>
-
-                <!-- Article 4: IT Recruiting -->
-                <article
-                  class="snap-start flex-shrink-0 w-full p-10 md:p-16 flex flex-col items-center text-center border-l border-white/5">
-                  <div
-                    class="flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/15 text-amber-400 mb-8 shrink-0 shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-                    </svg>
-                  </div>
-                  <h3 class="text-3xl font-extrabold text-white mb-6 tracking-tight">IT Recruiting</h3>
-                  <div class="flex flex-col gap-3 text-left w-full max-w-md mb-10 mx-auto">
-                    <div class="flex items-start gap-3 text-lg text-amber-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50"></span>
-                      <span>Selección técnica y filtros exhaustivos.</span>
-                    </div>
-                    <div class="flex items-start gap-3 text-lg text-amber-100/80">
-                      <span
-                        class="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-500 shadow-lg shadow-amber-500/50"></span>
-                      <span>Garantía total de contratación.</span>
-                    </div>
-                  </div>
-                  <a href="/servicios/it-recruiting"
-                    class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-amber-400 hover:text-amber-300 transition-colors bg-amber-500/10 px-6 py-3 rounded-full border border-amber-500/20 shadow-inner">
-                    Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </a>
-                </article>
-
+                </div>
               </div>
+              <div class="flex justify-center mt-6">
+                <a href="/#contacto"
+                  class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl text-white font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(147,51,234,0.5)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Agendar Reunión Técnica
+                </a>
+              </div>
+            </article>
 
-              <!-- 2. Navigation Arrows -->
-              <button id="prev-service"
-                class="absolute left-6 top-1/2 -translate-y-1/2 flex items-center justify-center h-16 w-16 rounded-full bg-white/5 border border-white/10 text-white/50 group-hover:text-white hover:bg-white/10 hover:border-white/20 transition-all shadow-xl group-hover:shadow-purple-500/20 group-hover:-translate-x-1.5 snap-center"
-                aria-label="Previous service">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>
-              </button>
-              <button id="next-service"
-                class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center justify-center h-16 w-16 rounded-full bg-white/5 border border-white/10 text-white/50 group-hover:text-white hover:bg-white/10 hover:border-white/20 transition-all shadow-xl group-hover:shadow-amber-500/20 group-hover:translate-x-1.5 snap-center"
-                aria-label="Next service">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-              </button>
+            <article class="snap-center flex-shrink-0 w-full p-6 md:p-10 lg:p-12 flex flex-col justify-between">
+              <div class="flex flex-col gap-6 xl:gap-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                  <div class="lg:w-1/2 text-center lg:text-left">
+                    <span
+                      class="inline-flex items-center rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-teal-300 mb-4 shadow-[0_0_15px_rgba(20,184,166,0.2)]">
+                      Reclutamiento IT
+                    </span>
+                    <h3 class="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                      No buscamos perfiles, <br class="hidden lg:block">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">validamos
+                        talento</span>
+                    </h3>
+                    <p class="mt-4 text-base xl:text-lg text-teal-100/80 leading-relaxed">
+                      Filtramos candidatos con rigor técnico real. Entendemos el stack, la arquitectura y la cultura que
+                      tu equipo necesita porque nosotros también construimos software.
+                    </p>
+                  </div>
+                  <div class="lg:w-1/2 w-full relative">
+                    <div
+                      class="absolute -inset-2 bg-gradient-to-r from-teal-600 to-blue-500 rounded-3xl blur-lg opacity-30">
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)"
+                        srcset="/assets/images/servicios/it-recruiting-banner.webp" type="image/webp">
+                      <source media="(min-width: 769px)" srcset="/assets/images/servicios/it-recruiting-banner.webp"
+                        type="image/webp">
+                      <img src="/assets/images/servicios/it-recruiting-banner.jpg" alt="Búsqueda de talento tecnológico"
+                        class="relative h-[220px] md:h-[300px] lg:h-[340px] xl:h-[400px] w-full rounded-2xl object-cover shadow-2xl border border-white/10"
+                        loading="lazy" decoding="async" width="1200" height="800">
+                    </picture>
+                  </div>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-teal-500/10 text-teal-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Validación por Expertos</h4>
+                      </div>
+                      <p class="text-teal-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Entrevistas
+                        técnicas profundas y pruebas de código reales para asegurar que el candidato domine tu stack.
+                      </p>
+                    </div>
+                    <ul class="space-y-3 text-teal-100 text-lg">
+                      <li><strong class="text-teal-400 font-bold">01.</strong> Evaluación de Stack (.NET, Laravel,
+                        Angular, etc).</li>
+                      <li><strong class="text-teal-400 font-bold">02.</strong> Soft Skills Técnicas bajo metodologías
+                        ágiles.</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-blue-500/10 text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Escalabilidad de Equipos</h4>
+                      </div>
+                      <p class="text-teal-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Integra
+                        desarrolladores senior de forma inmediata, minimizando la curva de aprendizaje y el riesgo.</p>
+                    </div>
+                    <ul class="space-y-3 text-teal-100 text-lg">
+                      <li><strong class="text-blue-400 font-bold">03.</strong> Integración Ágil lista para los sprints.
+                      </li>
+                      <li><strong class="text-blue-400 font-bold">04.</strong> Cero Burocracia: Sourcing y filtrado
+                        cubiertos.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center mt-6">
+                <a href="/#contacto"
+                  class="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-teal-600 to-blue-600 rounded-xl text-white font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(20,184,166,0.4)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Agendar Reunión Técnica
+                </a>
+              </div>
+            </article>
 
-            </div>
+            <article class="snap-center flex-shrink-0 w-full p-6 md:p-10 lg:p-12 flex flex-col justify-between">
+              <div class="flex flex-col gap-6 xl:gap-8">
+                <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                  <div class="lg:w-1/2 text-center lg:text-left">
+                    <span
+                      class="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-purple-300 mb-4 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                      Automatización con IA
+                    </span>
+                    <h3 class="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                      IA que trabaja, <br class="hidden lg:block">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">no que
+                        solo conversa</span>
+                    </h3>
+                    <p class="mt-4 text-base xl:text-lg text-purple-100/80 leading-relaxed">
+                      Automatizamos procesos críticos para reducir tareas manuales, eliminar cuellos de botella y
+                      liberar el talento de tu equipo para tareas de alto valor.
+                    </p>
+                  </div>
+                  <div class="lg:w-1/2 w-full relative">
+                    <div
+                      class="absolute -inset-2 bg-gradient-to-r from-purple-600 to-indigo-500 rounded-3xl blur-lg opacity-30">
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)"
+                        srcset="/assets/images/servicios/automatizacion-ia-banner.webp" type="image/webp">
+                      <source media="(min-width: 769px)" srcset="/assets/images/servicios/automatizacion-ia-banner.webp"
+                        type="image/webp">
+                      <img src="/assets/images/servicios/automatizacion-ia-banner.jpg"
+                        alt="Automatización inteligente para empresas"
+                        class="relative h-[220px] md:h-[300px] lg:h-[340px] xl:h-[400px] w-full rounded-2xl object-cover shadow-2xl border border-white/10"
+                        loading="lazy" decoding="async" width="1200" height="800">
+                    </picture>
+                  </div>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-purple-500/10 text-purple-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.293a2 2 0 01-1.631 0l-.628-.293a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-.34.34a2 2 0 000 2.829l1.245 1.245a2 2 0 002.829 0l.147-.147a2 2 0 012.733 0l.147.147a2 2 0 002.829 0l1.245-1.245a2 2 0 000-2.829l-.34-.34z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 9V3m0 0l-3 3m3-3l3 3" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Menos ruido, más flujo</h4>
+                      </div>
+                      <p class="text-purple-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Implementamos
+                        soluciones que resuelven problemas logísticos o administrativos sin complicar tu
+                        infraestructura.</p>
+                    </div>
+                    <ul class="space-y-3 text-purple-100 text-lg">
+                      <li><strong class="text-purple-400 font-bold">01.</strong> Flujos Autónomos integrando LLMs.</li>
+                      <li><strong class="text-purple-400 font-bold">02.</strong> Reducción de Errores con precisión
+                        24/7.</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="rounded-2xl border border-white/5 bg-black/20 p-6 md:p-8 hover:bg-white/5 transition-colors flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                          </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Conexión con el Negocio</h4>
+                      </div>
+                      <p class="text-purple-100/90 mb-6 text-lg xl:text-xl font-medium leading-relaxed">Desarrollamos
+                        integraciones que se comunican con tu CRM o ERP para que la IA tenga contexto real.</p>
+                    </div>
+                    <ul class="space-y-3 text-purple-100 text-lg">
+                      <li><strong class="text-indigo-400 font-bold">03.</strong> Contexto Personalizado con tus reglas.
+                      </li>
+                      <li><strong class="text-indigo-400 font-bold">04.</strong> Escalabilidad Operativa sin aumentar
+                        nómina.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center mt-6">
+                <a href="/#contacto"
+                  class="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl text-white font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(147,51,234,0.4)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Agendar Reunión Técnica
+                </a>
+              </div>
+            </article>
           </div>
+
+          <button id="prev-service"
+            class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-full bg-[#16203a] border border-white/20 text-white shadow-xl hover:scale-110 hover:bg-white/10 transition-all z-10"
+            aria-label="Anterior servicio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button id="next-service"
+            class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-full bg-[#16203a] border border-white/20 text-white shadow-xl hover:scale-110 hover:bg-white/10 transition-all z-10"
+            aria-label="Siguiente servicio">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
@@ -512,7 +702,11 @@
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
 
       <div class="flex flex-col items-center md:items-start gap-2">
-        <img src="assets/brand/logo_white.png" alt="MPBG Consulting" class="h-8 w-auto opacity-90" loading="lazy">
+        <picture>
+          <source srcset="assets/brand/logo_white.webp" type="image/webp">
+          <img src="assets/brand/logo_white.png" alt="MPBG Consulting" class="h-8 w-auto opacity-90" loading="lazy"
+            decoding="async" width="160" height="32">
+        </picture>
         <p class="text-sm text-gray-400">
           Conectamos los puntos, <span class="text-white font-medium">tú dominas el mercado.</span>
         </p>
@@ -533,7 +727,7 @@
           </svg>
         </a>
 
-        <!-- Instagram (Corregido) -->
+        <!-- Instagram -->
         <a href="https://www.instagram.com/mpbg_consulting" target="_blank" rel="noopener noreferrer"
           aria-label="Visitar el perfil de Instagram de MPBG Consulting"
           class="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all">

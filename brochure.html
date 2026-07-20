@@ -39,8 +39,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon/favicon-16x16.png">
 
-  <link rel="stylesheet" href="dist/css/styles.css?v=202607101131">
-  <script src="dist/js/app.js?v=202607101131" defer></script>
+  <link rel="stylesheet" href="dist/css/styles.css?v=202607211144">
+  <script src="dist/js/app.js?v=202607211144" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-70D7PQ99DT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -54,8 +54,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <header class="fixed top-0 w-full z-50 bg-[#0a0514]/80 backdrop-blur-xl border-b border-white/5">
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="/" class="transition-transform hover:scale-105 active:scale-95">
-      <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
-    </a>
+        <picture>
+          <source srcset="/assets/brand/logo_white.webp" type="image/webp">
+          <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9 w-auto" loading="eager"
+            fetchpriority="high" decoding="async" width="180" height="36"> <!-- Ajusta el width real de tu logo -->
+        </picture>
+      </a>
 
     <div class="hidden md:flex gap-1 items-center text-[17px] font-medium text-white/70">
       <a href="/#servicios" class="group flex items-center gap-2 px-4 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">

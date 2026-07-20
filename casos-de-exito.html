@@ -30,17 +30,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon/favicon-16x16.png">
-  <link rel="stylesheet" href="/dist/css/styles.css?v=202607101131">
+  <link rel="stylesheet" href="/dist/css/styles.css?v=202607211144">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script src="/dist/js/app.js?v=202607101131" defer></script>
+  <script src="/dist/js/app.js?v=202607211144" defer></script>
 </head>
 
 <body class="bg-[#0f0720] text-gray-100">
   <header class="fixed top-0 w-full z-50 bg-[#0a0514]/80 backdrop-blur-xl border-b border-white/5">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="transition-transform hover:scale-105 active:scale-95">
-        <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9" loading="eager" decoding="async">
+       <a href="/" class="transition-transform hover:scale-105 active:scale-95">
+        <picture>
+          <source srcset="/assets/brand/logo_white.webp" type="image/webp">
+          <img src="/assets/brand/logo_white.png" alt="MPBG Consulting" class="h-9 w-auto" loading="eager"
+            fetchpriority="high" decoding="async" width="180" height="36"> <!-- Ajusta el width real de tu logo -->
+        </picture>
       </a>
 
       <div class="hidden md:flex gap-1 items-center text-[17px] font-medium text-white/70">
