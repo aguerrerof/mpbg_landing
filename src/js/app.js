@@ -134,3 +134,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const carousel = document.getElementById('service-carousel');
+const prevBtn = document.getElementById('prev-service');
+const nextBtn = document.getElementById('next-service');
+
+// Gets the width of one full slide (including padding)
+const getSlideWidth = () => carousel.offsetWidth;
+
+nextBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: getSlideWidth(), behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+  carousel.scrollBy({ left: -getSlideWidth(), behavior: 'smooth' });
+});
+
+// Optional: Disable arrows if we are at the start or end
+carousel.addEventListener('scroll', () => {
+  const isAtStart = carousel.scrollLeft === 0;
+  const isAtEnd = carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth;
+
+  prevBtn.style.opacity = isAtStart ? '0.3' : '1';
+  prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+
+  nextBtn.style.opacity = isAtEnd ? '0.3' : '1';
+  nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+});
+
+// Initial arrow state dispatch
+carousel.dispatchEvent(new Event('scroll'));
