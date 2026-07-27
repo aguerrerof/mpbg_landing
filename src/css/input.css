@@ -1,4 +1,3 @@
-@import url('../../node_modules/@fontsource/inter/300.css');
 @import url('../../node_modules/@fontsource/inter/400.css');
 @import url('../../node_modules/@fontsource/inter/500.css');
 @import url('../../node_modules/@fontsource/inter/600.css');
@@ -10,27 +9,28 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
-.hero-rotator {
-  min-height: 520px;
+@media (max-width: 639px) {
+  .calendly-inline-widget {
+    min-width: 0 !important;
+  }
 }
 
-.hero-rotator [data-hero-slide] {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 800ms ease;
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1600px;
 }
 
-.hero-rotator [data-hero-slide].is-active {
-  opacity: 1;
-  z-index: 1;
+.deferred-section--compact {
+  contain-intrinsic-size: 1px 1100px;
 }
 
 .no-scrollbar::-webkit-scrollbar {

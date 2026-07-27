@@ -38,8 +38,12 @@ AddType image/webp .webp
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Redirect /servicios to home services section
-    RewriteRule ^servicios/?$ /#servicios [R=301,L]
+    # Consolidate legacy service URLs into the one-page service anchors.
+    RewriteRule ^servicios/software-a-medida(?:\.html)?/?$ /#software-a-medida [R=301,L,NE]
+    RewriteRule ^servicios/automatizacion-ia(?:\.html)?/?$ /#automatizacion-ia [R=301,L,NE]
+    RewriteRule ^servicios/staff-augmentation(?:\.html)?/?$ /#staff-augmentation [R=301,L,NE]
+    RewriteRule ^servicios/it-recruiting(?:\.html)?/?$ /#it-recruiting [R=301,L,NE]
+    RewriteRule ^servicios/?$ /#servicios [R=301,L,NE]
 
     # Redirect explicit index.html to root
     RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
@@ -55,12 +59,4 @@ AddType image/webp .webp
     RewriteCond %{DOCUMENT_ROOT}/$1.html -f
     RewriteRule ^(.+?)/?$ $1.html [L]
 
-    # [NUEVO] Si no es un directorio, ni un archivo, ni existe como .html -> Redirigir al landing con 302 (o 301 si prefieres permanente)
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{DOCUMENT_ROOT}/$1.html !-f
-    RewriteRule ^(.*)$ / [R=302,L]
 </IfModule>
-
-# [NUEVO] Respaldo nativo de Apache para errores de recursos directos (ej. una imagen vieja que ya no existe)
-ErrorDocument 404 /

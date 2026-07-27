@@ -1,20 +1,23 @@
 # MPBG Consulting
 
-Plataforma oficial de MPBG Consulting. Proporcionamos servicios avanzados de consultoría tecnológica, reclutamiento especializado, staff augmentation y desarrollo de soluciones de software a medida.
+> Consultoría técnica y desarrollo de software B2B en Ecuador. Ayudamos a empresas a escalar sus capacidades tecnológicas, optimizar arquitecturas y acelerar la entrega mediante software a medida, automatización con IA, staff augmentation y reclutamiento IT.
 
-## Servicios Principales
+## Servicios B2B
 
-- [Software a Medida](https://mpbg.ec/servicios/software-a-medida.html) - Diseño y desarrollo de arquitecturas de software eficientes, APIs asíncronas y automatización de flujos de trabajo.
-- [Staff Augmentation](https://mpbg.ec/servicios/staff-augmentation.html) - Ampliación de equipos técnicos con profesionales calificados para acelerar proyectos de desarrollo.
-- [IT Recruiting](https://mpbg.ec/servicios/it-recruiting.html) - Reclutamiento y selección especializada de talento humano en el sector de tecnología y desarrollo.
-- [Consultoría Tecnológica](https://mpbg.ec/) - Optimización de rendimiento de plataformas, auditorías y transformación digital empresarial.
+- [Software a Medida](https://mpbg.ec/#software-a-medida): Diseño y desarrollo de plataformas modulares, integraciones de sistemas y productos digitales de alto rendimiento.
+- [Staff Augmentation](https://mpbg.ec/#staff-augmentation): Integración de talento técnico senior para acelerar el delivery, aumentar el rendimiento y reforzar equipos de ingeniería.
+- [Reclutamiento IT](https://mpbg.ec/#it-recruiting): Búsqueda, evaluación y validación técnica profunda de perfiles tecnológicos adaptados a la cultura de tu equipo.
+- [Automatización con IA](https://mpbg.ec/#automatizacion-ia): Automatización inteligente de procesos operativos críticos e integración de modelos LLM con contexto de negocio.
 
 ## Casos de Éxito y Recursos
 
-- [Casos de Éxito](https://mpbg.ec/casos-de-exito.html) - Portafolio de proyectos ejecutados, soluciones de infraestructura implementadas e historias de impacto con nuestros clientes.
-- [Brochure Corporativo](https://mpbg.ec/brochure.html) - Catálogo completo de capacidades, metodologías de trabajo y modelo de servicios de la consultora.
+- [Caso de Éxito: Modernización Logística](https://mpbg.ec/#caso-de-exito): Reingeniería del core de fulfillment para Sniffy, migrando arquitectura de datos a PostgreSQL + Laravel y reduciendo un 70% las tareas manuales.
+- [Casos de Éxito](https://mpbg.ec/#caso-de-exito): Portafolio completo de soluciones implementadas, arquitecturas e historias de impacto.
+- [Brochure Corporativo](https://mpbg.ec/#brochure): Resumen de capacidades, metodologías de ingeniería y modelo de servicios de la consultora.
 
-## Canales Oficiales y Redes
+## Contacto y Canales Oficiales
 
-- [LinkedIn](https://www.linkedin.com/company/mpbg-consulting) - Perfil corporativo institucional en LinkedIn.
-- [Instagram](https://www.instagram.com/mpbg_consulting) - Cuenta oficial con novedades y proyectos de la firma.
+- [Primera Sesión Técnica Gratuita](https://mpbg.ec/#contacto): Sesión de diagnóstico de 30 minutos sin costo para analizar arquitectura, capacidad de equipo o automatización.
+- [LinkedIn](https://www.linkedin.com/company/mpbg-consulting): Perfil corporativo institucional y novedades de la firma.
+- [Instagram](https://www.instagram.com/mpbg_consulting): Novedades, proyectos y cultura de MPBG Consulting.
+- Correo electrónico: info@mpbg.ec

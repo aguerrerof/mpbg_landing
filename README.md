@@ -4,20 +4,19 @@
 
 Landing page oficial de MPBG Consulting.
 
-## Qué incluye
+## Que incluye
 
-- Home principal con hero, servicios y sección de Tech Stack
-- Páginas internas para cada servicio
-- Lightbox para ampliar imágenes
-- Estilos compilados con Tailwind CSS
-- JavaScript compilado con Babel
+- Landing B2B de una sola pagina con todos los servicios y contacto.
+- Lightbox para ampliar imagenes.
+- Estilos compilados con Tailwind CSS.
+- JavaScript compilado con Babel.
 
 ## Requisitos
 
-- Node.js 18 o superior
-- npm
+- Node.js 18 o superior.
+- npm.
 
-## Instalación
+## Instalacion
 
 ```bash
 npm install
@@ -43,33 +42,20 @@ Sirve el proyecto localmente:
 npm run serve
 ```
 
-## Limpiar caché
+## Cache
 
-Si haces cambios y no se ven en el navegador:
-
-1. Haz un hard refresh con `Ctrl + F5`.
-2. Abre la web en ventana incógnita.
-3. Si el sitio sigue mostrando contenido viejo, borra caché del navegador.
-4. Ejecuta el comando del proyecto para refrescar la caché publicada:
+Si haces cambios y no se ven en el navegador, actualiza las versiones de CSS y JS:
 
 ```bash
 npm run cache
 ```
 
-Si el problema es del proyecto compilado:
+## Estructura
 
-```bash
-npm run build
-```
-
-## Estructura básica
-
-- `index.html`: página principal
-- `servicios/`: páginas internas de servicios
-- `assets/`: imágenes y recursos
-- `src/`: CSS y JavaScript fuente
-- `dist/`: archivos compilados
-
-## Nota
+- `index.html`: landing B2B de una sola pagina.
+- `assets/images/servicios/`: imagenes utilizadas por las secciones de servicio.
+- `assets/`: imagenes y recursos.
+- `src/`: CSS y JavaScript fuente.
+- `dist/`: archivos compilados.
 
 Los cambios en `src/` deben compilarse antes de publicarse en `dist/`.

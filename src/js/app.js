@@ -1,3 +1,79 @@
+const loadThirdPartyScript = src => {
+  if (!src) return null;
+
+  const existing = document.querySelector(`script[data-src="${src}"]`);
+  if (existing) return existing;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = src;
+  script.dataset.src = src;
+  document.head.appendChild(script);
+  return script;
+};
+
+const scheduleIdleTask = callback => {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback, { timeout: 2000 });
+    return;
+  }
+
+  window.setTimeout(callback, 0);
+};
+
+const initAnalytics = () => {
+  const body = document.body;
+  if (!body) return;
+
+  const gtmId = body.dataset.gtmId;
+  const gtagId = body.dataset.gtagId;
+
+  const loadGtm = () => {
+    if (!gtmId || window.__mpbgGtmLoaded) return;
+    window.__mpbgGtmLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js',
+    });
+
+    const gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+    document.head.appendChild(gtmScript);
+  };
+
+  const loadGtag = () => {
+    if (!gtagId || window.__mpbgGtagLoaded) return;
+    window.__mpbgGtagLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
+
+    loadThirdPartyScript(`https://www.googletagmanager.com/gtag/js?id=${gtagId}`);
+    window.gtag('js', new Date());
+    window.gtag('config', gtagId);
+  };
+
+  const init = () => {
+    loadGtm();
+    loadGtag();
+  };
+
+  if (document.readyState === 'complete') {
+    scheduleIdleTask(init);
+  } else {
+    window.addEventListener('load', () => {
+      scheduleIdleTask(init);
+    }, { once: true });
+  }
+};
+
+initAnalytics();
+
 document.addEventListener('DOMContentLoaded', () => {
   const calendlyEventName = 'calendly.event_scheduled';
 
@@ -7,15 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.getElementById('image-lightbox');
   const lightboxImage = document.getElementById('image-lightbox-img');
   const lightboxClose = document.getElementById('image-lightbox-close');
-  const heroRotator = document.getElementById('hero-rotator');
-  const heroSlides = heroRotator ? heroRotator.querySelectorAll('[data-hero-slide]') : [];
-  const heroDots = heroRotator ? heroRotator.querySelectorAll('[data-hero-dot]') : [];
-  const heroPrev = heroRotator ? heroRotator.querySelector('.hero-prev') : null;
-  const heroNext = heroRotator ? heroRotator.querySelector('.hero-next') : null;
-  const heroInterval = heroRotator ? Number(heroRotator.dataset.heroInterval || 5500) : 5500;
 
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileMenu.classList.toggle('hidden');
     });
 
@@ -23,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
     });
   }
 
@@ -43,55 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImage.alt = '';
     document.body.classList.remove('overflow-hidden');
   };
-
-  const setHeroSlide = index => {
-    heroSlides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('is-active', slideIndex === index);
-    });
-
-    heroDots.forEach((dot, dotIndex) => {
-      dot.classList.toggle('bg-white/70', dotIndex === index);
-      dot.classList.toggle('bg-white/30', dotIndex !== index);
-    });
-  };
-
-  let heroIndex = 0;
-  let heroTimer = null;
-
-  const restartHeroTimer = () => {
-    if (heroTimer) {
-      clearInterval(heroTimer);
-    }
-
-    heroTimer = setInterval(() => {
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      setHeroSlide(heroIndex);
-    }, heroInterval);
-  };
-
-  const goToHeroSlide = index => {
-    heroIndex = (index + heroSlides.length) % heroSlides.length;
-    setHeroSlide(heroIndex);
-    restartHeroTimer();
-  };
-
-  if (heroSlides.length && heroDots.length) {
-    setHeroSlide(heroIndex);
-
-    heroDots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => goToHeroSlide(dotIndex));
-    });
-
-    if (heroPrev) {
-      heroPrev.addEventListener('click', () => goToHeroSlide(heroIndex - 1));
-    }
-
-    if (heroNext) {
-      heroNext.addEventListener('click', () => goToHeroSlide(heroIndex + 1));
-    }
-
-    restartHeroTimer();
-  }
 
   document.querySelectorAll('.js-zoom-image').forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -117,7 +145,64 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Calendly emits booking events via postMessage; forward the scheduled event to GTM.
+  const brochureEmbed = document.querySelector('[data-lazy-pdf]');
+
+  const loadBrochureEmbed = container => {
+    if (!container || container.dataset.loaded === 'true') {
+      return;
+    }
+
+    const pdfSrc = container.dataset.pdfSrc;
+
+    if (!pdfSrc) {
+      return;
+    }
+
+    container.innerHTML = `
+      <object data="${pdfSrc}" type="application/pdf" class="w-full h-[650px] bg-zinc-950">
+        <div class="flex flex-col items-center justify-center h-full p-8 text-center space-y-6">
+          <div class="p-4 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400">
+            <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="space-y-2 max-w-md">
+            <h3 class="text-xl font-semibold text-white">Visualización en pantalla</h3>
+            <p class="text-lg text-zinc-400 leading-relaxed">Tu navegador no permite embeber directamente el PDF.
+              Puedes descargarlo directamente o abrirlo en una nueva pestaña.</p>
+          </div>
+          <a href="${pdfSrc}" download
+            class="px-6 py-3 bg-zinc-100 text-zinc-950 rounded-xl font-semibold text-lg hover:bg-white transition-colors">
+            Descargar Brochure PDF
+          </a>
+        </div>
+      </object>
+    `;
+
+    container.dataset.loaded = 'true';
+  };
+
+  if (brochureEmbed) {
+    if ('IntersectionObserver' in window) {
+      const brochureObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loadBrochureEmbed(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '300px 0px',
+        threshold: 0
+      });
+
+      brochureObserver.observe(brochureEmbed);
+    } else {
+      loadBrochureEmbed(brochureEmbed);
+    }
+  }
+
   window.addEventListener('message', event => {
     if (!event?.data || typeof event.data !== 'object') return;
 
@@ -133,34 +218,29 @@ document.addEventListener('DOMContentLoaded', () => {
       calendly_event_name: 'event_scheduled',
     });
   });
+  
+  const contactoSection = document.getElementById('contacto');
+  
+  if (contactoSection) {
+    const calendlyObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const calendlyCSS = document.createElement('link');
+          calendlyCSS.rel = 'stylesheet';
+          calendlyCSS.href = 'https://assets.calendly.com/assets/external/widget.css';
+          document.head.appendChild(calendlyCSS);
+          const calendlyScript = document.createElement('script');
+          calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+          calendlyScript.async = true;
+          document.body.appendChild(calendlyScript);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '400px 0px',
+      threshold: 0
+    });
+
+    calendlyObserver.observe(contactoSection);
+  }
 });
-
-const carousel = document.getElementById('service-carousel');
-const prevBtn = document.getElementById('prev-service');
-const nextBtn = document.getElementById('next-service');
-
-// Gets the width of one full slide (including padding)
-const getSlideWidth = () => carousel.offsetWidth;
-
-nextBtn.addEventListener('click', () => {
-  carousel.scrollBy({ left: getSlideWidth(), behavior: 'smooth' });
-});
-
-prevBtn.addEventListener('click', () => {
-  carousel.scrollBy({ left: -getSlideWidth(), behavior: 'smooth' });
-});
-
-// Optional: Disable arrows if we are at the start or end
-carousel.addEventListener('scroll', () => {
-  const isAtStart = carousel.scrollLeft === 0;
-  const isAtEnd = carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth;
-
-  prevBtn.style.opacity = isAtStart ? '0.3' : '1';
-  prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
-
-  nextBtn.style.opacity = isAtEnd ? '0.3' : '1';
-  nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
-});
-
-// Initial arrow state dispatch
-carousel.dispatchEvent(new Event('scroll'));
