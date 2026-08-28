@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
-  <title>MPBG Consulting | Software, IA y Talento Tech B2B</title>
-  <meta name="title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
-  <meta name="description"
+  <title id="page-title">MPBG Consulting | Software, IA y Talento Tech B2B</title>
+  <meta id="meta-title" name="title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
+  <meta id="meta-description" name="description"
     content="Consultoría B2B en software a medida, automatización con IA y reclutamiento IT. Ayudamos a equipos a escalar con más control, menos fricción y resultados medibles." />
-  <meta name="keywords"
+  <meta id="meta-keywords" name="keywords"
     content="consultoria software, staff augmentation, desarrollo a medida, automatizacion IA, reclutamiento IT, arquitectura de software, MPBG, Ecuador, software B2B" />
   <meta name="author" content="MPBG Consulting" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -18,21 +18,21 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mpbg.ec/" />
-  <meta property="og:title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
-  <meta property="og:description"
+  <meta id="meta-og-title" property="og:title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
+  <meta id="meta-og-description" property="og:description"
     content="Escala tu operación con software a medida, automatización con IA y talento senior. Agenda una sesión inicial sin costo." />
   <meta property="og:image" content="https://mpbg.ec/assets/brand/og-image.jpg" />
-  <meta property="og:locale" content="es_EC" />
+  <meta id="meta-og-locale" property="og:locale" content="es_EC" />
   <meta property="og:site_name" content="MPBG Consulting" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://mpbg.ec/" />
-  <meta name="twitter:title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
-  <meta name="twitter:description"
+  <meta id="meta-twitter-title" name="twitter:title" content="MPBG Consulting | Software, IA y Talento Tech B2B" />
+  <meta id="meta-twitter-description" name="twitter:description"
     content="Escala tu operación con software a medida, automatización con IA y talento senior. Agenda una sesión inicial sin costo." />
   <meta name="twitter:image" content="https://mpbg.ec/assets/brand/og-image.jpg" />
 
-  <script type="application/ld+json">
+  <script id="structured-data" type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -55,8 +55,8 @@
   </script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon/favicon-32x32.png">
-  <link rel="stylesheet" href="/dist/css/styles.css?v=202608271240">
-  <script src="/dist/js/app.js?v=202608271240" defer></script>
+  <link rel="stylesheet" href="/dist/css/styles.css?v=20260828">
+  <script src="/dist/js/app.js?v=20260828" defer></script>
 </head>
 
 <body data-gtm-id="GTM-MV3HC77P"
@@ -65,7 +65,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
 
   <header class="fixed top-0 w-full z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800 transition-all">
-    <nav class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl">
+    <nav class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl gap-4">
       <a href="#" class="transition-opacity hover:opacity-80">
         <picture>
           <source srcset="/assets/brand/logo_white.webp" type="image/webp">
@@ -74,17 +74,24 @@
         </picture>
       </a>
 
-      <div class="hidden md:flex gap-8 items-center text-lg font-mono uppercase tracking-wider text-zinc-300">
-        <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
-        <a href="#caso-de-exito" class="hover:text-white transition-colors">Casos de Éxito</a>
-        <a href="#brochure" class="hover:text-white transition-colors">Brochure</a>
-        <a href="#contacto"
+      <div class="hidden md:flex items-center gap-6 text-lg font-mono uppercase tracking-wider text-zinc-300">
+        <div class="flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/60 p-1 text-xs font-mono uppercase tracking-[0.24em]">
+          <button type="button" data-lang-switch="es" data-i18n-attr="aria-label:locale.esLabel,title:locale.esLabel"
+            class="min-w-[2.75rem] rounded-sm border border-zinc-100 bg-zinc-100 px-3 py-1.5 font-semibold text-zinc-950 transition-colors">ES</button>
+          <button type="button" data-lang-switch="en" data-i18n-attr="aria-label:locale.enLabel,title:locale.enLabel"
+            class="min-w-[2.75rem] rounded-sm border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 font-semibold text-zinc-400 transition-colors">EN</button>
+        </div>
+        <a href="#servicios" data-i18n="nav.services" class="hover:text-white transition-colors">Servicios</a>
+        <a href="#caso-de-exito" data-i18n="nav.caseStudy" class="hover:text-white transition-colors">Casos de Éxito</a>
+        <a href="#brochure" data-i18n="nav.brochure" class="hover:text-white transition-colors">Brochure</a>
+        <a href="#contacto" data-i18n="nav.schedule"
           class="px-5 py-2.5 bg-zinc-100 text-zinc-950 rounded-lg font-semibold font-sans normal-case text-lg hover:bg-white transition-colors">
           Agendar
         </a>
       </div>
 
-      <button id="menu-btn" aria-label="Menú" class="md:hidden p-2 text-zinc-300 hover:text-white">
+      <button id="menu-btn" data-i18n-attr="aria-label:nav.menu,title:nav.menu" aria-label="Menú"
+        class="md:hidden p-2 text-zinc-300 hover:text-white">
         <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -93,10 +100,16 @@
 
     <div id="mobile-menu"
       class="hidden md:hidden absolute top-full left-0 w-full bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 px-6 py-6 flex flex-col gap-4 text-left font-mono uppercase tracking-wider text-zinc-300 shadow-xl">
-      <a href="#servicios" class="mobile-link hover:text-white transition-colors py-2">Servicios</a>
-      <a href="#caso-de-exito" class="mobile-link hover:text-white transition-colors py-2">Casos de Éxito</a>
-      <a href="#brochure" class="mobile-link hover:text-white transition-colors py-2">Brochure</a>
-      <a href="#contacto"
+      <div class="flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/60 p-1 text-xs font-mono uppercase tracking-[0.24em] w-fit">
+        <button type="button" data-lang-switch="es" data-i18n-attr="aria-label:locale.esLabel,title:locale.esLabel"
+          class="min-w-[2.75rem] rounded-sm border border-zinc-100 bg-zinc-100 px-3 py-1.5 font-semibold text-zinc-950 transition-colors">ES</button>
+        <button type="button" data-lang-switch="en" data-i18n-attr="aria-label:locale.enLabel,title:locale.enLabel"
+          class="min-w-[2.75rem] rounded-sm border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 font-semibold text-zinc-400 transition-colors">EN</button>
+      </div>
+      <a href="#servicios" data-i18n="nav.services" class="mobile-link hover:text-white transition-colors py-2">Servicios</a>
+      <a href="#caso-de-exito" data-i18n="nav.caseStudy" class="mobile-link hover:text-white transition-colors py-2">Casos de Éxito</a>
+      <a href="#brochure" data-i18n="nav.brochure" class="mobile-link hover:text-white transition-colors py-2">Brochure</a>
+      <a href="#contacto" data-i18n="nav.schedule"
         class="mobile-link px-5 py-3 bg-zinc-100 text-zinc-950 rounded-lg font-semibold font-sans normal-case text-lg hover:bg-white transition-colors text-center mt-2">
         Agendar
       </a>
@@ -110,28 +123,31 @@
 
         <div class="flex justify-center">
           <span
+            data-i18n="hero.badge"
             class="inline-flex items-center gap-2.5 rounded-md border border-zinc-800 bg-zinc-900/80 px-4 py-1.5 text-lg font-mono text-zinc-300">
             <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
             Consultoría B2B · Sesión inicial sin costo
           </span>
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.15]">
+        <h1 data-i18n="hero.title" class="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.15]">
           Escala tu operación tecnológica <br class="hidden sm:block" />
           <span class="text-zinc-400 font-normal">sin perder control ni velocidad</span>
         </h1>
 
-        <p class="text-lg sm:text-2xl text-zinc-300 leading-relaxed max-w-3xl mx-auto">
+        <p data-i18n="hero.description" class="text-lg sm:text-2xl text-zinc-300 leading-relaxed max-w-3xl mx-auto">
           Sumamos talento senior, software a medida y automatización para que tu equipo avance con más claridad,
           menos fricción y mejores decisiones operativas.
         </p>
 
         <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#contacto"
+            data-i18n="hero.primaryCta"
             class="w-full sm:w-auto px-8 py-4 bg-zinc-100 text-zinc-950 font-semibold text-lg rounded-xl hover:bg-white transition-colors text-center">
             Agendar diagnóstico
           </a>
           <a href="#servicios"
+            data-i18n="hero.secondaryCta"
             class="w-full sm:w-auto px-8 py-4 border border-zinc-800 bg-zinc-900/60 text-zinc-200 font-semibold text-lg rounded-xl hover:bg-zinc-800 transition-colors text-center">
             Ver Servicios
           </a>
@@ -145,15 +161,16 @@
       <div class="w-full px-4 sm:px-8 lg:px-12 space-y-12">
         <div class="mx-auto max-w-4xl space-y-5 text-center">
           <span
+            data-i18n="services.tag"
             class="mx-auto inline-flex items-center gap-2.5 rounded-md border border-zinc-800 bg-zinc-900/80 px-4 py-1.5 text-lg font-mono text-zinc-300">
             Servicios estratégicos B2B
           </span>
 
-          <h2 id="servicios-title" class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+          <h2 id="servicios-title" data-i18n="services.title" class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
             Capacidades pensadas para equipos que necesitan avanzar con orden y escalar sin fricción
           </h2>
 
-          <p class="text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-3xl">
+          <p data-i18n="services.description" class="text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-3xl">
             Acompañamos a líderes de negocio y tecnología con staff augmentation, software a medida, automatización
             con IA y reclutamiento IT, con foco en control operativo, trazabilidad y resultados medibles.
           </p>
@@ -166,17 +183,18 @@
               <div class="order-2 lg:order-1 p-7 sm:p-8 lg:p-10">
                 <div class="flex items-center justify-between gap-4">
                   <span
+                    data-i18n="services.staff.label"
                     class="inline-flex items-center rounded-md border border-zinc-800 bg-zinc-950 px-3 py-1 text-sm font-mono uppercase tracking-wider text-zinc-300">
                     Staff Augmentation
                   </span>
-                  <span class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Talento senior</span>
+                  <span data-i18n="services.staff.subtitle" class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Talento senior</span>
                 </div>
 
-                <h3 class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h3 data-i18n="services.staff.title" class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Capacidad senior para avanzar sin fricción
                 </h3>
 
-                <p class="mt-4 text-lg text-zinc-300 leading-relaxed">
+                <p data-i18n="services.staff.description" class="mt-4 text-lg text-zinc-300 leading-relaxed">
                   Sumamos perfiles que se integran a tu tecnología, tus procesos y tu nivel de gobierno desde el
                   primer sprint.
                 </p>
@@ -184,15 +202,15 @@
                 <ul class="mt-6 space-y-4 text-zinc-300 leading-relaxed">
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Incorporación rápida.</strong> Perfiles senior y lead con onboarding ordenado.</span>
+                    <span data-i18n="services.staff.point1"><strong class="text-zinc-100">Incorporación rápida.</strong> Perfiles senior y lead con onboarding ordenado.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Continuidad operativa.</strong> Seguimiento claro, prioridades visibles y menos retrabajo.</span>
+                    <span data-i18n="services.staff.point2"><strong class="text-zinc-100">Continuidad operativa.</strong> Seguimiento claro, prioridades visibles y menos retrabajo.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Ideal para.</strong> Picos de demanda, expansión de squads y cobertura temporal.</span>
+                    <span data-i18n="services.staff.point3"><strong class="text-zinc-100">Ideal para.</strong> Picos de demanda, expansión de squads y cobertura temporal.</span>
                   </li>
                 </ul>
               </div>
@@ -207,6 +225,7 @@
                     sizes="(max-width: 1023px) 100vw, 42vw">
                   <img src="/assets/images/servicios/staff-augmentation-banner-960.jpg"
                     alt="Profesionales senior integrándose a un equipo de tecnología"
+                    data-i18n-attr="alt:services.staff.imageAlt"
                     class="h-full w-full object-cover"
                     loading="lazy" decoding="async" fetchpriority="low" width="1200" height="600">
                 </picture>
@@ -221,17 +240,18 @@
               <div class="order-2 lg:order-1 p-7 sm:p-8 lg:p-10">
                 <div class="flex items-center justify-between gap-4">
                   <span
+                    data-i18n="services.software.label"
                     class="inline-flex items-center rounded-md border border-zinc-800 bg-zinc-950 px-3 py-1 text-sm font-mono uppercase tracking-wider text-zinc-300">
                     Software a Medida
                   </span>
-                  <span class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Arquitectura modular</span>
+                  <span data-i18n="services.software.subtitle" class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Arquitectura modular</span>
                 </div>
 
-                <h3 class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h3 data-i18n="services.software.title" class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Soluciones pensadas para crecer con tu operación
                 </h3>
 
-                <p class="mt-4 text-lg text-zinc-300 leading-relaxed">
+                <p data-i18n="services.software.description" class="mt-4 text-lg text-zinc-300 leading-relaxed">
                   Diseñamos productos y backoffice B2B con una base flexible, entregas graduales y mantenimiento
                   sostenible.
                 </p>
@@ -239,15 +259,15 @@
                 <ul class="mt-6 space-y-4 text-zinc-300 leading-relaxed">
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Base modular.</strong> Backoffice, portales y herramientas listas para crecer.</span>
+                    <span data-i18n="services.software.point1"><strong class="text-zinc-100">Base modular.</strong> Backoffice, portales y herramientas listas para crecer.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Tecnología adecuada.</strong> Elegimos la solución por estabilidad, soporte y rendimiento.</span>
+                    <span data-i18n="services.software.point2"><strong class="text-zinc-100">Tecnología adecuada.</strong> Elegimos la solución por estabilidad, soporte y rendimiento.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Ideal para.</strong> Operaciones internas, productos B2B y automatización de procesos.</span>
+                    <span data-i18n="services.software.point3"><strong class="text-zinc-100">Ideal para.</strong> Operaciones internas, productos B2B y automatización de procesos.</span>
                   </li>
                 </ul>
               </div>
@@ -262,6 +282,7 @@
                     sizes="(max-width: 1023px) 100vw, 42vw">
                   <img src="/assets/images/servicios/software-a-medida-banner-960.jpg"
                     alt="Equipo creando software a medida para una operación B2B"
+                    data-i18n-attr="alt:services.software.imageAlt"
                     class="h-full w-full object-cover"
                     loading="lazy" decoding="async" fetchpriority="low" width="1200" height="600">
                 </picture>
@@ -276,32 +297,33 @@
               <div class="order-2 lg:order-1 p-7 sm:p-8 lg:p-10">
                 <div class="flex items-center justify-between gap-4">
                   <span
+                    data-i18n="services.automation.label"
                     class="inline-flex items-center rounded-md border border-zinc-800 bg-zinc-950 px-3 py-1 text-sm font-mono uppercase tracking-wider text-zinc-300">
                     Automatización con IA
                   </span>
-                  <span class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Procesos trazables</span>
+                  <span data-i18n="services.automation.subtitle" class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Procesos trazables</span>
                 </div>
 
-                <h3 class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h3 data-i18n="services.automation.title" class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Automatización con IA para reducir tareas repetitivas
                 </h3>
 
-                <p class="mt-4 text-lg text-zinc-300 leading-relaxed">
+                <p data-i18n="services.automation.description" class="mt-4 text-lg text-zinc-300 leading-relaxed">
                   Automatizamos tareas críticas con visibilidad total, control y conexión con tus sistemas actuales.
                 </p>
 
                 <ul class="mt-6 space-y-4 text-zinc-300 leading-relaxed">
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Conexión con tus plataformas.</strong> CRM, ERP y bases de datos dentro de un mismo flujo.</span>
+                    <span data-i18n="services.automation.point1"><strong class="text-zinc-100">Conexión con tus plataformas.</strong> CRM, ERP y bases de datos dentro de un mismo flujo.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Monitoreo claro.</strong> Menos intervención manual y más control sobre cada paso.</span>
+                    <span data-i18n="services.automation.point2"><strong class="text-zinc-100">Monitoreo claro.</strong> Menos intervención manual y más control sobre cada paso.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Ideal para.</strong> Clasificación, seguimiento, validación y reporting.</span>
+                    <span data-i18n="services.automation.point3"><strong class="text-zinc-100">Ideal para.</strong> Clasificación, seguimiento, validación y reporting.</span>
                   </li>
                 </ul>
               </div>
@@ -316,6 +338,7 @@
                     sizes="(max-width: 1023px) 100vw, 42vw">
                   <img src="/assets/images/servicios/automatizacion-ia-banner-960.jpg"
                     alt="Automatización de procesos empresariales con inteligencia artificial"
+                    data-i18n-attr="alt:services.automation.imageAlt"
                     class="h-full w-full object-cover"
                     loading="lazy" decoding="async" fetchpriority="low" width="1200" height="600">
                 </picture>
@@ -330,17 +353,18 @@
               <div class="order-2 lg:order-1 p-7 sm:p-8 lg:p-10">
                 <div class="flex items-center justify-between gap-4">
                   <span
+                    data-i18n="services.recruiting.label"
                     class="inline-flex items-center rounded-md border border-zinc-800 bg-zinc-950 px-3 py-1 text-sm font-mono uppercase tracking-wider text-zinc-300">
                     Reclutamiento IT
                   </span>
-                  <span class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Validación experta</span>
+                  <span data-i18n="services.recruiting.subtitle" class="text-xs font-mono uppercase tracking-[0.24em] text-zinc-500">Validación experta</span>
                 </div>
 
-                <h3 class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
+                <h3 data-i18n="services.recruiting.title" class="mt-5 text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Talento IT validado para reducir riesgo de contratación
                 </h3>
 
-                <p class="mt-4 text-lg text-zinc-300 leading-relaxed">
+                <p data-i18n="services.recruiting.description" class="mt-4 text-lg text-zinc-300 leading-relaxed">
                   Filtramos candidatos con evaluación práctica y criterio de negocio para acelerar la contratación sin
                   bajar el estándar.
                 </p>
@@ -348,15 +372,15 @@
                 <ul class="mt-6 space-y-4 text-zinc-300 leading-relaxed">
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Validación práctica.</strong> Pruebas reales y revisión de habilidades blandas.</span>
+                    <span data-i18n="services.recruiting.point1"><strong class="text-zinc-100">Validación práctica.</strong> Pruebas reales y revisión de habilidades blandas.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Ajuste al entorno.</strong> Tecnologías, seniority y forma de trabajo en una sola evaluación.</span>
+                    <span data-i18n="services.recruiting.point2"><strong class="text-zinc-100">Ajuste al entorno.</strong> Tecnologías, seniority y forma de trabajo en una sola evaluación.</span>
                   </li>
                   <li class="flex gap-3">
                     <span class="mt-2 h-2 w-2 rounded-full bg-emerald-400 shrink-0" aria-hidden="true"></span>
-                    <span><strong class="text-zinc-100">Ideal para.</strong> Contratación rápida con menos riesgo y menos retrabajo.</span>
+                    <span data-i18n="services.recruiting.point3"><strong class="text-zinc-100">Ideal para.</strong> Contratación rápida con menos riesgo y menos retrabajo.</span>
                   </li>
                 </ul>
               </div>
@@ -371,6 +395,7 @@
                     sizes="(max-width: 1023px) 100vw, 42vw">
                   <img src="/assets/images/servicios/it-recruiting-banner-960.jpg"
                     alt="Búsqueda y validación de talento tecnológico para empresas"
+                    data-i18n-attr="alt:services.recruiting.imageAlt"
                     class="h-full w-full object-cover"
                     loading="lazy" decoding="async" fetchpriority="low" width="1200" height="600">
                 </picture>
@@ -383,13 +408,13 @@
         <div
           class="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div class="space-y-2 max-w-2xl">
-            <h3 class="text-xl sm:text-2xl font-semibold text-white">¿Necesitas combinar más de una capacidad?</h3>
-            <p class="text-lg text-zinc-300 leading-relaxed">
+            <h3 data-i18n="services.hybrid.title" class="text-xl sm:text-2xl font-semibold text-white">¿Necesitas combinar más de una capacidad?</h3>
+            <p data-i18n="services.hybrid.description" class="text-lg text-zinc-300 leading-relaxed">
               Diseñamos un alcance híbrido según tus prioridades, tu ritmo de entrega y el nivel de control que
               necesita tu operación.
             </p>
           </div>
-          <a href="#contacto"
+          <a href="#contacto" data-i18n="services.hybrid.cta"
             class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-zinc-100 text-zinc-950 font-semibold text-lg hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
             Agendar diagnóstico
           </a>
@@ -404,15 +429,16 @@
           <div class="grid lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
               <span
+                data-i18n="caseStudy.tag"
                 class="inline-flex items-center rounded-md border border-zinc-800 bg-zinc-950 px-3 py-1 text-lg font-mono text-zinc-300">
                 Sniffy OS
               </span>
 
-              <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
+              <h2 data-i18n="caseStudy.title" class="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
                 Modernización de la operación logística y entregas
               </h2>
 
-              <p class="text-lg sm:text-xl text-zinc-300 leading-relaxed">
+              <p data-i18n="caseStudy.description" class="text-lg sm:text-xl text-zinc-300 leading-relaxed">
                 Consolidamos una operación muy manual en una plataforma centralizada para crecer en volumen sin sumar
                 complejidad.
               </p>
@@ -420,23 +446,23 @@
               <div class="grid sm:grid-cols-2 gap-6 pt-4 max-w-lg mx-auto lg:mx-0">
                 <div class="border-t sm:border-t-0 sm:border-l-2 border-zinc-700 pt-4 sm:pt-0 sm:pl-4">
                   <p class="text-4xl font-mono font-bold text-white">70%</p>
-                  <p class="text-lg text-zinc-400 mt-1">Reducción de tareas manuales</p>
+                  <p data-i18n="caseStudy.metric1Label" class="text-lg text-zinc-400 mt-1">Reducción de tareas manuales</p>
                 </div>
                 <div class="border-t sm:border-t-0 sm:border-l-2 border-zinc-700 pt-4 sm:pt-0 sm:pl-4">
                   <p class="text-4xl font-mono font-bold text-white">E2E</p>
-                  <p class="text-lg text-zinc-400 mt-1">Control operativo en tiempo real</p>
+                  <p data-i18n="caseStudy.metric2Label" class="text-lg text-zinc-400 mt-1">Control operativo en tiempo real</p>
                 </div>
               </div>
 
               <ul class="space-y-3 text-lg font-mono text-zinc-400 pt-4 inline-block text-left">
                 <li class="flex items-center gap-3">
-                  <span class="text-zinc-500">▪</span> Migración a una base de datos más estable y escalable
+                  <span class="text-zinc-500">▪</span> <span data-i18n="caseStudy.bullet1">Migración a una base de datos más estable y escalable</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="text-zinc-500">▪</span> Integración automatizada con sistemas de envío
+                  <span class="text-zinc-500">▪</span> <span data-i18n="caseStudy.bullet2">Integración automatizada con sistemas de envío</span>
                 </li>
                 <li class="flex items-center gap-3">
-                  <span class="text-zinc-500">▪</span> Backoffice a medida para centralizar la operación
+                  <span class="text-zinc-500">▪</span> <span data-i18n="caseStudy.bullet3">Backoffice a medida para centralizar la operación</span>
                 </li>
               </ul>
             </div>
@@ -458,6 +484,7 @@
                       sizes="(max-width: 1023px) 100vw, 420px">
                     <img src="/assets/images/caso-exito-1-1200.jpg"
                       alt="Caso de éxito Sniffy OS - Modernización del Core Logístico & Fulfillment"
+                      data-i18n-attr="alt:caseStudy.imageAlt"
                       class="w-full h-auto object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-75"
                       loading="lazy" decoding="async" fetchpriority="low" width="1200" height="800">
                   </picture>
@@ -467,7 +494,7 @@
                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-950/40 backdrop-blur-[2px]">
                     <span
                       class="inline-flex items-center gap-2 rounded-lg bg-zinc-900/90 border border-zinc-700 px-4 py-2 text-sm font-medium text-white shadow-xl">
-                      <span>Ver publicación en Instagram</span>
+                      <span data-i18n="caseStudy.imageHover">Ver publicación en Instagram</span>
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -480,7 +507,7 @@
               <!-- Botón independiente Ver más -->
               <a href="https://www.instagram.com/p/DXcGWAhj7-V/?img_index=1" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl border border-zinc-800 bg-zinc-900/80 hover:bg-zinc-800 text-zinc-200 font-medium transition-colors duration-200 text-base group">
-                <span>Ver publicación</span>
+                <span data-i18n="caseStudy.viewPost">Ver publicación</span>
                 <svg class="w-4 h-4 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 transition-all"
                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
@@ -499,10 +526,10 @@
 
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div class="space-y-4 max-w-2xl">
-            <span class="text-lg font-mono uppercase tracking-widest text-emerald-400">Material ejecutivo</span>
-            <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight">Brochure ejecutivo y capacidades
+            <span data-i18n="brochure.tag" class="text-lg font-mono uppercase tracking-widest text-emerald-400">Material ejecutivo</span>
+            <h2 data-i18n="brochure.title" class="text-3xl sm:text-5xl font-bold text-white tracking-tight">Brochure ejecutivo y capacidades
             </h2>
-            <p class="text-lg sm:text-lg text-zinc-300 leading-relaxed">
+            <p data-i18n="brochure.description" class="text-lg sm:text-lg text-zinc-300 leading-relaxed">
               Descarga o visualiza una versión clara de nuestras capacidades para compartirla con dirección, operaciones
               o recursos humanos.
             </p>
@@ -515,11 +542,11 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Descargar PDF
+              <span data-i18n="brochure.download">Descargar PDF</span>
             </a>
             <a href="/assets/brochure/brochure.pdf" target="_blank" rel="noopener noreferrer"
               class="px-6 py-3.5 border border-zinc-800 bg-zinc-900/60 text-zinc-200 font-semibold text-lg rounded-xl hover:bg-zinc-800 transition-colors text-center inline-flex items-center justify-center gap-2">
-              <span>Abrir PDF</span>
+              <span data-i18n="brochure.open">Abrir PDF</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -539,13 +566,13 @@
                 </svg>
               </div>
               <div class="space-y-2 max-w-md">
-                <h3 class="text-xl font-semibold text-white">Visualización en pantalla</h3>
-                <p class="text-lg text-zinc-400 leading-relaxed">Cargamos el brochure cuando te acercas a esta sección
+                <h3 data-i18n="embed.title" class="text-xl font-semibold text-white">Visualización en pantalla</h3>
+                <p data-i18n="embed.description" class="text-lg text-zinc-400 leading-relaxed">Cargamos el brochure cuando te acercas a esta sección
                   para no afectar la carga inicial de la página.</p>
               </div>
               <a href="/assets/brochure/brochure.pdf" download
                 class="px-6 py-3 bg-zinc-100 text-zinc-950 rounded-xl font-semibold text-lg hover:bg-white transition-colors">
-                Descargar Brochure PDF
+                <span data-i18n="embed.download">Descargar Brochure PDF</span>
               </a>
             </div>
           </div>
@@ -560,10 +587,10 @@
 
           <div class="lg:col-span-5 space-y-8 text-center lg:text-left">
             <div class="space-y-4">
-              <span class="text-lg font-mono uppercase tracking-widest text-emerald-400">Sesión inicial sin costo · Sin
+              <span data-i18n="contact.tag" class="text-lg font-mono uppercase tracking-widest text-emerald-400">Sesión inicial sin costo · Sin
                 compromiso</span>
-              <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Agenda una sesión de diagnóstico</h2>
-              <p class="text-lg sm:text-lg text-zinc-300 leading-relaxed">
+              <h2 data-i18n="contact.title" class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Agenda una sesión de diagnóstico</h2>
+              <p data-i18n="contact.description" class="text-lg sm:text-lg text-zinc-300 leading-relaxed">
                 Revisamos tu operación, capacidad de equipo y oportunidades de automatización en una sesión de 30
                 minutos sin costo.
               </p>
@@ -571,13 +598,13 @@
 
             <div class="space-y-6 pt-6 border-t border-zinc-800">
               <div>
-                <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Correo Corporativo</p>
+                <p data-i18n="contact.emailLabel" class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Correo Corporativo</p>
                 <a href="mailto:info@mpbg.ec"
                   class="text-xl sm:text-2xl font-medium text-zinc-100 hover:text-white transition-colors">info@mpbg.ec</a>
               </div>
 
               <div>
-                <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Canales profesionales</p>
+                <p data-i18n="contact.channelsLabel" class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">Canales profesionales</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="https://www.linkedin.com/company/mpbg-consulting" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 text-lg text-zinc-300 hover:text-white transition-colors">
@@ -587,7 +614,7 @@
                       <path d="M5.337 7.433a2.064 2.064 0 110-4.129 2.064 2.064 0 010 4.129z" />
                       <path d="M6.857 20.452H3.816V9h3.041v11.452z" />
                     </svg>
-                    LinkedIn
+                    <span data-i18n="contact.linkedin">LinkedIn</span>
                   </a>
                   <a href="https://www.instagram.com/mpbg_consulting" target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 text-lg text-zinc-300 hover:text-white transition-colors">
@@ -596,7 +623,7 @@
                       <circle cx="12" cy="12" r="4" />
                       <circle cx="17" cy="7" r="1" />
                     </svg>
-                    Instagram
+                    <span data-i18n="contact.instagram">Instagram</span>
                   </a>
                 </div>
               </div>
@@ -623,7 +650,7 @@
         <span class="text-zinc-800">|</span>
         <p class="text-xs text-zinc-400 uppercase tracking-widest">© 2026 MPBG Consulting</p>
       </div>
-      <p class="text-lg text-zinc-400">Software, talento y automatización para operaciones que necesitan avanzar.</p>
+      <p data-i18n="footer.description" class="text-lg text-zinc-400">Software, talento y automatización para operaciones que necesitan avanzar.</p>
     </div>
   </footer>
 
