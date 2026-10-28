@@ -5,14 +5,9 @@ const SUPPORTED_LOCALES = ['es', 'en'];
 const translations = {
   es: {
     meta: {
-      title: 'MPBG Consulting | Software, IA y Talento Tech B2B',
-      description: 'Consultoría B2B en software a medida, automatización con IA y reclutamiento IT. Ayudamos a equipos a escalar con más control, menos fricción y resultados medibles.',
-      keywords: 'consultoria software, staff augmentation, desarrollo a medida, automatizacion IA, reclutamiento IT, arquitectura de software, MPBG, Ecuador, software B2B',
-      ogTitle: 'MPBG Consulting | Software, IA y Talento Tech B2B',
-      ogDescription: 'Escala tu operación con software a medida, automatización con IA y talento senior. Agenda una sesión inicial sin costo.',
-      twitterTitle: 'MPBG Consulting | Software, IA y Talento Tech B2B',
-      twitterDescription: 'Escala tu operación con software a medida, automatización con IA y talento senior. Agenda una sesión inicial sin costo.',
-      structuredDescription: 'Consultoría B2B en software a medida, automatización con IA, staff augmentation y reclutamiento IT.'
+      title: 'MPBG Consulting | Consultoría Tecnológica, Desarrollo de Software & Staff Augmentation',
+      description: 'Líderes en consultoría tecnológica B2B y B2C, arquitectura de software, desarrollo a medida, automatización y staff augmentation. Equipo de +30 consultores multidisciplinarios.',
+      keywords: 'consultoria tecnologica, desarrollo de software, staff augmentation, arquitectura de software, laravel, python, microservicios, n8n automatizacion, sercop, mpbg consulting'
     },
     locale: {
       esLabel: 'Español',
@@ -20,120 +15,85 @@ const translations = {
     },
     nav: {
       services: 'Servicios',
-      caseStudy: 'Casos de Éxito',
-      brochure: 'Brochure',
+      stack: 'Tecnologías & Capacidades',
+      caseStudy: 'Caso de Éxito',
       schedule: 'Agendar',
       menu: 'Abrir menú'
     },
-    hero: {
-      badge: 'Consultoría B2B · Sesión inicial sin costo',
-      title: 'Escala tu operación tecnológica <br class="hidden sm:block" /><span class="text-zinc-400 font-normal">sin perder control ni velocidad</span>',
-      description: 'Sumamos talento senior, software a medida y automatización para que tu equipo avance con más claridad, menos fricción y mejores decisiones operativas.',
-      primaryCta: 'Agendar diagnóstico',
-      secondaryCta: 'Ver Servicios'
+   hero: {
+      badge: 'Primera asesoría gratuita',
+      title: 'Consultoría Tecnológica, Desarrollo de Software & Staff Augmentation',
+      description: 'Resolvemos la complejidad operativa e infraestructura de tu empresa o aplicación, adaptándonos perfectamente a lo que tus requerimientos exigen para acelerar el éxito de tus productos digitales.',
+      primaryCta: 'Agendar consultoría gratuita (Videollamada)'
     },
-    services: {
-      tag: 'Servicios estratégicos B2B',
-      title: 'Capacidades pensadas para equipos que necesitan avanzar con orden y escalar sin fricción',
-      description: 'Acompañamos a líderes de negocio y tecnología con staff augmentation, software a medida, automatización con IA y reclutamiento IT, con foco en control operativo, trazabilidad y resultados medibles.',
-      staff: {
-        label: 'Staff Augmentation',
-        subtitle: 'Talento senior',
-        title: 'Capacidad senior para avanzar sin fricción',
-        description: 'Sumamos perfiles que se integran a tu tecnología, tus procesos y tu nivel de gobierno desde el primer sprint.',
-        point1: '<strong class="text-zinc-100">Incorporación rápida.</strong> Perfiles senior y lead con onboarding ordenado.',
-        point2: '<strong class="text-zinc-100">Continuidad operativa.</strong> Seguimiento claro, prioridades visibles y menos retrabajo.',
-        point3: '<strong class="text-zinc-100">Ideal para.</strong> Picos de demanda, expansión de squads y cobertura temporal.',
-        imageAlt: 'Profesionales senior integrándose a un equipo de tecnología'
-      },
-      software: {
-        label: 'Software a Medida',
-        subtitle: 'Arquitectura modular',
-        title: 'Soluciones pensadas para crecer con tu operación',
-        description: 'Diseñamos productos y backoffice B2B con una base flexible, entregas graduales y mantenimiento sostenible.',
-        point1: '<strong class="text-zinc-100">Base modular.</strong> Backoffice, portales y herramientas listas para crecer.',
-        point2: '<strong class="text-zinc-100">Tecnología adecuada.</strong> Elegimos la solución por estabilidad, soporte y rendimiento.',
-        point3: '<strong class="text-zinc-100">Ideal para.</strong> Operaciones internas, productos B2B y automatización de procesos.',
-        imageAlt: 'Equipo creando software a medida para una operación B2B'
-      },
-      automation: {
-        label: 'Automatización con IA',
-        subtitle: 'Procesos trazables',
-        title: 'Automatización con IA para reducir tareas repetitivas',
-        description: 'Automatizamos tareas críticas con visibilidad total, control y conexión con tus sistemas actuales.',
-        point1: '<strong class="text-zinc-100">Conexión con tus plataformas.</strong> CRM, ERP y bases de datos dentro de un mismo flujo.',
-        point2: '<strong class="text-zinc-100">Monitoreo claro.</strong> Menos intervención manual y más control sobre cada paso.',
-        point3: '<strong class="text-zinc-100">Ideal para.</strong> Clasificación, seguimiento, validación y reporting.',
-        imageAlt: 'Automatización de procesos empresariales con inteligencia artificial'
-      },
-      recruiting: {
-        label: 'Reclutamiento IT',
-        subtitle: 'Validación experta',
-        title: 'Talento IT validado para reducir riesgo de contratación',
-        description: 'Filtramos candidatos con evaluación práctica y criterio de negocio para acelerar la contratación sin bajar el estándar.',
-        point1: '<strong class="text-zinc-100">Validación práctica.</strong> Pruebas reales y revisión de habilidades blandas.',
-        point2: '<strong class="text-zinc-100">Ajuste al entorno.</strong> Tecnologías, seniority y forma de trabajo en una sola evaluación.',
-        point3: '<strong class="text-zinc-100">Ideal para.</strong> Contratación rápida con menos riesgo y menos retrabajo.',
-        imageAlt: 'Búsqueda y validación de talento tecnológico para empresas'
-      },
-      hybrid: {
-        title: '¿Necesitas combinar más de una capacidad?',
-        description: 'Diseñamos un alcance híbrido según tus prioridades, tu ritmo de entrega y el nivel de control que necesita tu operación.',
-        cta: 'Agendar diagnóstico'
-      }
+    skills: {
+      tag: 'Infografía de Capacidades & Stack Empresarial',
+      title: 'Ecosistema técnico que impulsa al equipo detrás de MPBG',
+      desc: 'Infografía corporativa interactiva con el stack tecnológico de nuestros 30 consultores especialistas.',
+      backend: { title: 'Backend' },
+      frontend: { title: 'Frontend & Móvil' },
+      db: { title: 'Bases de Datos' },
+      cloud: { title: 'Cloud & DevOps' },
+      auto: { title: 'Automatización & ERP' },
+      ai: { title: 'IA Generativa & Modelos' }
     },
-    caseStudy: {
-      tag: 'Sniffy OS',
-      title: 'Modernización de la operación logística y entregas',
-      description: 'Consolidamos una operación muy manual en una plataforma centralizada para crecer en volumen sin sumar complejidad.',
-      metric1Label: 'Reducción de tareas manuales',
-      metric2Label: 'Control operativo en tiempo real',
-      bullet1: 'Migración a una base de datos más estable y escalable',
-      bullet2: 'Integración automatizada con sistemas de envío',
-      bullet3: 'Backoffice a medida para centralizar la operación',
-      imageHover: 'Ver publicación en Instagram',
-      viewPost: 'Ver publicación'
-    },
-    brochure: {
-      tag: 'Material ejecutivo',
-      title: 'Brochure ejecutivo y capacidades',
-      description: 'Descarga o visualiza una versión clara de nuestras capacidades para compartirla con dirección, operaciones o recursos humanos.',
-      download: 'Descargar PDF',
-      open: 'Abrir PDF',
-      fallback: {
-        title: 'Visualización en pantalla',
-        description: 'Tu navegador no permite embeber directamente el PDF. Puedes descargarlo directamente o abrirlo en una nueva pestaña.',
-        download: 'Descargar Brochure PDF'
-      }
+    case: {
+      badge: '✨ Caso de Éxito Real',
+      title: 'Caso de éxito: Sniffy - Transformación de una operación logística en una plataforma escalable.',
+      desc: 'En MPBG Consulting transformamos una operación logística compleja en una infraestructura de alto rendimiento. Sniffy necesitaba mayor velocidad, control operativo centralizado y una base lista para crecer.'
     },
     contact: {
-      tag: 'Sesión inicial sin costo · Sin compromiso',
-      title: 'Agenda una sesión de diagnóstico',
-      description: 'Revisamos tu operación, capacidad de equipo y oportunidades de automatización en una sesión de 30 minutos sin costo.',
-      emailLabel: 'Correo Corporativo',
-      channelsLabel: 'Canales profesionales',
-      linkedin: 'LinkedIn',
-      instagram: 'Instagram'
+      sub: 'Proceso de Admisión Técnica',
+      title: 'Inicia tu consultoría técnica corporativa',
+      desc: 'Completa tus requerimientos a continuación; al enviarlos, podrás agendar inmediatamente tu videollamada con nuestro equipo de consultores.'
     },
-    footer: {
-      description: 'Software, talento y automatización para operaciones que necesitan avanzar.'
+    form: {
+      stepTag: 'Paso 1 de 2',
+      heading: 'Requerimientos del proyecto',
+      name: 'Nombre y Apellido *',
+      email: 'Correo Electrónico *',
+      company: 'Empresa / Proyecto *',
+      q1: 'Área de apoyo técnico *',
+      selectOpt: 'Selecciona una opción...',
+      q2: 'Presupuesto estimado *',
+      selectRange: 'Selecciona un rango...',
+      challenge: 'Cuéntenos algo que nos ayude a prepararnos para la reunión:',
+      error: 'Por favor completa todos los campos obligatorios.',
+      btn: 'Continuar a agendar videollamada'
     },
-    embed: {
-      title: 'Visualización en pantalla',
-      description: 'Tu navegador no permite embeber directamente el PDF. Puedes descargarlo directamente o abrirlo en una nueva pestaña.',
-      download: 'Descargar Brochure PDF'
+    video: {
+      badge: '🟢 Paso 2 de 2: Videollamada técnica (30 min)',
+      title: 'Selecciona fecha y hora en el calendario',
+      loading: 'Cargando disponibilidad de consultores...'
+    },
+    direct: {
+      title: '¿Prefieres contacto directo?'
+    },
+    services: {
+      tag: 'Soluciones de Alto Impacto',
+      title: 'Soluciones reales para problemas de negocio reales',
+      consulting: {
+        title: 'Consultoría Estratégica & Optimización Cloud',
+        painPoint: '¿Costos operativos en la nube descontrolados, lentitud en los sistemas o plataformas difíciles de escalar?',
+        description: 'Diagnosticamos tu infraestructura, reducimos costos innecesarios y diseñamos bases sólidas para garantizar la continuidad y velocidad de tu empresa.'
+      },
+      software: {
+        title: 'Desarrollo a Medida & Automatización',
+        painPoint: '¿Procesos manuales repetitivos, sistemas desconectados o falta de visibilidad operativa en tiempo real?',
+        description: 'Construimos plataformas a medida y conectamos tus sistemas clave (ERP, logísticos y comerciales) mediante flujos automatizados que eliminan errores y horas de trabajo manual.'
+      },
+      staff: {
+        title: 'Refuerzo de Equipos (Staff Augmentation)',
+        painPoint: '¿Faltan consultores especializados o líderes técnicos calificados para cumplir con los plazos de entrega del negocio?',
+        description: 'Integramos de forma inmediata consultores experimentados a tus células de trabajo internas, asegurando entregas puntuales y altos estándares de calidad.'
+      }
     }
   },
   en: {
     meta: {
-      title: 'MPBG Consulting | Software, AI and B2B Tech Talent',
-      description: 'B2B consulting in custom software, AI automation, and IT recruiting. We help teams scale with more control, less friction, and measurable results.',
-      keywords: 'software consulting, staff augmentation, custom development, AI automation, IT recruiting, software architecture, MPBG, Ecuador, B2B software',
-      ogTitle: 'MPBG Consulting | Software, AI and B2B Tech Talent',
-      ogDescription: 'Scale your operation with custom software, AI automation, and senior talent. Book a free initial session.',
-      twitterTitle: 'MPBG Consulting | Software, AI and B2B Tech Talent',
-      twitterDescription: 'Scale your operation with custom software, AI automation, and senior talent. Book a free initial session.',
-      structuredDescription: 'B2B consulting in custom software, AI automation, staff augmentation, and IT recruiting.'
+      title: 'MPBG Consulting | Tech Consulting, Software Development & Staff Augmentation',
+      description: 'Leaders in B2B and B2C tech consulting, software architecture, custom development, automation, and staff augmentation. Team of 30+ multidisciplinary consultants.',
+      keywords: 'tech consulting, software development, staff augmentation, software architecture, devops, laravel, python, microservices, n8n automation, mpbg consulting'
     },
     locale: {
       esLabel: 'Spanish',
@@ -141,184 +101,79 @@ const translations = {
     },
     nav: {
       services: 'Services',
-      caseStudy: 'Success Stories',
-      brochure: 'Brochure',
+      stack: 'Technologies & Capabilities',
+      caseStudy: 'Case Study',
       schedule: 'Book',
       menu: 'Open menu'
     },
     hero: {
-      badge: 'B2B consulting · Free initial session',
-      title: 'Scale your technology operation <br class="hidden sm:block" /><span class="text-zinc-400 font-normal">without losing control or speed</span>',
-      description: 'We combine senior talent, custom software, and automation so your team can move with more clarity, less friction, and better operating decisions.',
-      primaryCta: 'Book a diagnosis',
-      secondaryCta: 'View Services'
+      badge: '✨ 30+ Multidisciplinary Consultants · First free consultation',
+      title: 'Technology Consulting, Software Development & Staff Augmentation',
+      description: 'We streamline operational complexity and tech infrastructure for your business or app. We offer 30+ multidisciplinary consultants specializing in cloud architecture, custom software, and team augmentation to accelerate your digital growth.',
+      primaryCta: 'Book Free Consultation (Video Call)'
     },
-    services: {
-      tag: 'Strategic B2B services',
-      title: 'Capabilities designed for teams that need to move in order and scale without friction',
-      description: 'We support business and technology leaders with staff augmentation, custom software, AI automation, and IT recruiting, focused on operational control, traceability, and measurable results.',
-      staff: {
-        label: 'Staff Augmentation',
-        subtitle: 'Senior talent',
-        title: 'Senior capacity to move without friction',
-        description: 'We add profiles that integrate with your technology, your processes, and your governance level from the first sprint.',
-        point1: '<strong class="text-zinc-100">Fast onboarding.</strong> Senior and lead profiles with an orderly ramp-up.',
-        point2: '<strong class="text-zinc-100">Operational continuity.</strong> Clear follow-up, visible priorities, and less rework.',
-        point3: '<strong class="text-zinc-100">Best for.</strong> Demand spikes, squad expansion, and temporary coverage.',
-        imageAlt: 'Senior professionals joining a technology team'
-      },
-      software: {
-        label: 'Custom Software',
-        subtitle: 'Modular architecture',
-        title: 'Solutions built to grow with your operation',
-        description: 'We design B2B products and back office tools with a flexible base, phased delivery, and sustainable maintenance.',
-        point1: '<strong class="text-zinc-100">Modular base.</strong> Back office, portals, and tools ready to grow.',
-        point2: '<strong class="text-zinc-100">Right technology.</strong> We choose the solution for stability, support, and performance.',
-        point3: '<strong class="text-zinc-100">Best for.</strong> Internal operations, B2B products, and process automation.',
-        imageAlt: 'Team building custom software for a B2B operation'
-      },
-      automation: {
-        label: 'AI Automation',
-        subtitle: 'Traceable processes',
-        title: 'AI automation to reduce repetitive work',
-        description: 'We automate critical tasks with full visibility, control, and connection to your current systems.',
-        point1: '<strong class="text-zinc-100">Connected to your platforms.</strong> CRM, ERP, and databases within one flow.',
-        point2: '<strong class="text-zinc-100">Clear monitoring.</strong> Less manual intervention and more control over each step.',
-        point3: '<strong class="text-zinc-100">Best for.</strong> Classification, follow-up, validation, and reporting.',
-        imageAlt: 'Business process automation with artificial intelligence'
-      },
-      recruiting: {
-        label: 'IT Recruiting',
-        subtitle: 'Expert validation',
-        title: 'Validated IT talent to reduce hiring risk',
-        description: 'We screen candidates with hands-on evaluation and business criteria to speed up hiring without lowering the bar.',
-        point1: '<strong class="text-zinc-100">Practical validation.</strong> Real tests and soft-skill review.',
-        point2: '<strong class="text-zinc-100">Environment fit.</strong> Technology, seniority, and work style in one assessment.',
-        point3: '<strong class="text-zinc-100">Best for.</strong> Fast hiring with less risk and less rework.',
-        imageAlt: 'Search and validation of technology talent for companies'
-      },
-      hybrid: {
-        title: 'Need to combine more than one capability?',
-        description: 'We design a hybrid scope based on your priorities, your delivery pace, and the level of control your operation needs.',
-        cta: 'Book a diagnosis'
-      }
+    skills: {
+      tag: 'Capabilities Infographic & Stack',
+      title: 'Technical ecosystem powering the team behind MPBG',
+      desc: 'Interactive corporate infographic displaying the stack of our 30 specialist consultants.',
+      backend: { title: 'Backend' },
+      frontend: { title: 'Frontend & Mobile' },
+      db: { title: 'Databases' },
+      cloud: { title: 'Cloud & DevOps' },
+      auto: { title: 'Automation & ERP' },
+      ai: { title: 'Generative AI & Models' }
     },
-    caseStudy: {
-      tag: 'Sniffy OS',
-      title: 'Modernizing logistics and delivery operations',
-      description: 'We consolidated a very manual operation into a centralized platform to grow volume without adding complexity.',
-      metric1Label: 'Reduction in manual work',
-      metric2Label: 'Real-time operational control',
-      bullet1: 'Migration to a more stable and scalable database',
-      bullet2: 'Automated integration with shipping systems',
-      bullet3: 'Custom back office to centralize operations',
-      imageHover: 'View post on Instagram',
-      viewPost: 'View post',
-      imageAlt: 'Sniffy OS success story - modernization of the logistics core and fulfillment'
-    },
-    brochure: {
-      tag: 'Executive material',
-      title: 'Executive brochure and capabilities',
-      description: 'Download or preview a clear version of our capabilities to share with leadership, operations, or human resources.',
-      download: 'Download PDF',
-      open: 'Open PDF',
-      fallback: {
-        title: 'On-screen view',
-        description: 'Your browser does not allow direct PDF embedding. You can download it or open it in a new tab.',
-        download: 'Download brochure PDF'
-      }
+    case: {
+      badge: '✨ Real Case Study',
+      title: 'Case study: Sniffy - Transforming a logistics operation into a scalable platform.',
+      desc: 'At MPBG Consulting we transformed a complex logistics operation into a high-performance infrastructure. Sniffy needed faster processing, centralized operational control, and a scalable foundation.'
     },
     contact: {
-      tag: 'Free initial session · No commitment',
-      title: 'Book a diagnostic session',
-      description: 'We review your operation, team capacity, and automation opportunities in a free 30-minute session.',
-      emailLabel: 'Corporate email',
-      channelsLabel: 'Professional channels',
-      linkedin: 'LinkedIn',
-      instagram: 'Instagram'
+      sub: 'Technical Admission Process',
+      title: 'Start your corporate technical consulting',
+      desc: 'Complete your requirements below; upon submission, you can immediately schedule your video call with our consulting team.'
     },
-    footer: {
-      description: 'Software, talent, and automation for operations that need to move faster.'
+    form: {
+      stepTag: 'Step 1 of 2',
+      heading: 'Project Requirements',
+      name: 'Full Name *',
+      email: 'Email Address *',
+      company: 'Company / Project *',
+      q1: 'Technical Support Area *',
+      selectOpt: 'Select an option...',
+      q2: 'Estimated Budget *',
+      selectRange: 'Select a range...',
+      challenge: 'Tell us something that helps us prepare for the call:',
+      error: 'Please fill out all required fields.',
+      btn: 'Continue to schedule video call'
     },
-    embed: {
-      title: 'On-screen view',
-      description: 'Your browser does not allow direct PDF embedding. You can download it or open it in a new tab.',
-      download: 'Download brochure PDF'
+    video: {
+      badge: '🟢 Step 2 of 2: Technical Video Call (30 min)',
+      title: 'Select date and time on the calendar',
+      loading: 'Loading consultant availability...'
+    },
+    direct: {
+      title: 'Prefer direct contact?'
+    },
+    services: {
+      tag: 'High-Impact Solutions',
+      title: 'Real solutions for real business challenges',
+      consulting: {
+        title: 'Strategic Consulting & Cloud Optimization',
+        painPoint: 'Uncontrolled cloud operating costs, slow systems, or platforms hard to scale?',
+        description: 'We diagnose your infrastructure, reduce unnecessary costs, and build solid foundations to ensure continuity and speed.'
+      },
+      software: {
+        title: 'Custom Development & Automation',
+        painPoint: 'Repetitive manual processes, disconnected systems, or lack of real-time operational visibility?',
+        description: 'We build custom platforms and connect your core systems (ERP, logistics, and sales) through automated workflows that eliminate manual work hours.'
+      },
+      staff: {
+        title: 'Team Augmentation (Staff Augmentation)',
+        painPoint: 'Missing specialized consultants or qualified leads to meet business delivery deadlines?',
+        description: 'We immediately integrate experienced consultants into your internal squads, ensuring timely deliveries and high quality standards.'
+      }
     }
-  }
-};
-
-const loadThirdPartyScript = src => {
-  if (!src) return null;
-
-  const existing = document.querySelector(`script[data-src="${src}"]`);
-  if (existing) return existing;
-
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = src;
-  script.dataset.src = src;
-  document.head.appendChild(script);
-  return script;
-};
-
-const scheduleIdleTask = callback => {
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(callback, { timeout: 2000 });
-    return;
-  }
-
-  window.setTimeout(callback, 0);
-};
-
-const initAnalytics = () => {
-  const body = document.body;
-  if (!body) return;
-
-  const gtmId = body.dataset.gtmId;
-  const gtagId = body.dataset.gtagId;
-
-  const loadGtm = () => {
-    if (!gtmId || window.__mpbgGtmLoaded) return;
-    window.__mpbgGtmLoaded = true;
-
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js'
-    });
-
-    const gtmScript = document.createElement('script');
-    gtmScript.async = true;
-    gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
-    document.head.appendChild(gtmScript);
-  };
-
-  const loadGtag = () => {
-    if (!gtagId || window.__mpbgGtagLoaded) return;
-    window.__mpbgGtagLoaded = true;
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () {
-      window.dataLayer.push(arguments);
-    };
-
-    loadThirdPartyScript(`https://www.googletagmanager.com/gtag/js?id=${gtagId}`);
-    window.gtag('js', new Date());
-    window.gtag('config', gtagId);
-  };
-
-  const init = () => {
-    loadGtm();
-    loadGtag();
-  };
-
-  if (document.readyState === 'complete') {
-    scheduleIdleTask(init);
-  } else {
-    window.addEventListener('load', () => {
-      scheduleIdleTask(init);
-    }, { once: true });
   }
 };
 
@@ -332,11 +187,7 @@ const safeGetStoredLocale = () => {
 };
 
 const safeSetStoredLocale = locale => {
-  try {
-    window.localStorage.setItem(STORAGE_KEY, locale);
-  } catch {
-    // Ignore storage failures.
-  }
+  try { window.localStorage.setItem(STORAGE_KEY, locale); } catch {}
 };
 
 const getUrlLocale = () => {
@@ -350,188 +201,57 @@ const getTranslation = (locale, key) => {
   return typeof value === 'string' ? value : '';
 };
 
-const currentLocaleMeta = locale => ({
-  lang: locale === 'en' ? 'en' : 'es-EC',
-  ogLocale: locale === 'en' ? 'en_US' : 'es_EC'
-});
-
-const updateUrlLocale = locale => {
-  const url = new URL(window.location.href);
-
-  if (locale === DEFAULT_LOCALE) {
-    url.searchParams.delete('lang');
-  } else {
-    url.searchParams.set('lang', locale);
-  }
-
-  window.history.replaceState({}, '', url);
-};
-
 const updateLanguageButtons = locale => {
   document.querySelectorAll('[data-lang-switch]').forEach(button => {
     const isActive = button.dataset.langSwitch === locale;
     button.setAttribute('aria-pressed', String(isActive));
-    button.classList.toggle('bg-zinc-100', isActive);
-    button.classList.toggle('text-zinc-950', isActive);
-    button.classList.toggle('border-zinc-100', isActive);
-    button.classList.toggle('bg-zinc-900/60', !isActive);
-    button.classList.toggle('text-zinc-400', !isActive);
-    button.classList.toggle('border-zinc-800', !isActive);
+    button.classList.toggle('bg-blue-100', isActive);
+    button.classList.toggle('text-blue-950', isActive);
+    button.classList.toggle('border-blue-100', isActive);
+    button.classList.toggle('bg-blue-900/60', !isActive);
+    button.classList.toggle('text-blue-200', !isActive);
+    button.classList.toggle('border-blue-800', !isActive);
   });
 };
 
-const updateMetaTags = locale => {
-  const copy = translations[locale];
-  const meta = currentLocaleMeta(locale);
-
-  document.documentElement.lang = meta.lang;
-  document.body.dataset.locale = locale;
-  document.title = copy.meta.title;
-
-  const metaTitle = document.getElementById('meta-title');
-  const metaDescription = document.getElementById('meta-description');
-  const metaKeywords = document.getElementById('meta-keywords');
-  const metaOgTitle = document.getElementById('meta-og-title');
-  const metaOgDescription = document.getElementById('meta-og-description');
-  const metaOgLocale = document.getElementById('meta-og-locale');
-  const metaTwitterTitle = document.getElementById('meta-twitter-title');
-  const metaTwitterDescription = document.getElementById('meta-twitter-description');
-  const structuredData = document.getElementById('structured-data');
-
-  if (metaTitle) metaTitle.content = copy.meta.title;
-  if (metaDescription) metaDescription.content = copy.meta.description;
-  if (metaKeywords) metaKeywords.content = copy.meta.keywords;
-  if (metaOgTitle) metaOgTitle.content = copy.meta.ogTitle;
-  if (metaOgDescription) metaOgDescription.content = copy.meta.ogDescription;
-  if (metaOgLocale) metaOgLocale.content = meta.ogLocale;
-  if (metaTwitterTitle) metaTwitterTitle.content = copy.meta.twitterTitle;
-  if (metaTwitterDescription) metaTwitterDescription.content = copy.meta.twitterDescription;
-  if (structuredData) {
-    structuredData.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'ProfessionalService',
-      name: 'MPBG Consulting',
-      url: 'https://mpbg.ec',
-      logo: 'https://mpbg.ec/assets/brand/logo_white.png',
-      image: 'https://mpbg.ec/assets/brand/og-image.jpg',
-      description: copy.meta.structuredDescription,
-      email: 'info@mpbg.ec',
-      sameAs: [
-        'https://www.linkedin.com/company/mpbg-consulting',
-        'https://www.instagram.com/mpbg_consulting'
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'EC'
-      },
-      priceRange: '$$'
-    }, null, 2);
-  }
-};
-
 const renderLocalizedContent = locale => {
+  const meta = translations[locale]?.meta;
+  if (meta) {
+    document.title = meta.title;
+    const descEl = document.querySelector('meta[name="description"]');
+    if (descEl) descEl.setAttribute('content', meta.description);
+    const keywordsEl = document.querySelector('meta[name="keywords"]');
+    if (keywordsEl) keywordsEl.setAttribute('content', meta.keywords);
+  }
+
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const translation = getTranslation(locale, element.dataset.i18n);
     if (translation) {
       element.innerHTML = translation;
     }
   });
-
-  document.querySelectorAll('[data-i18n-attr]').forEach(element => {
-    element.dataset.i18nAttr.split(',').map(pair => pair.trim()).forEach(pair => {
-      if (!pair) return;
-
-      const [attribute, key] = pair.split(':').map(part => part.trim());
-      if (!attribute || !key) return;
-
-      const translation = getTranslation(locale, key);
-      if (translation) {
-        element.setAttribute(attribute, translation);
-      }
-    });
-  });
 };
 
 let currentLocale = getUrlLocale() || safeGetStoredLocale() || DEFAULT_LOCALE;
-let brochureEmbedContainer = null;
 
 const applyLocale = (locale, options = {}) => {
   const normalizedLocale = SUPPORTED_LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
-  const { persist = true, syncUrl = true } = options;
-
+  const { persist = true } = options;
   currentLocale = normalizedLocale;
-  updateMetaTags(normalizedLocale);
   renderLocalizedContent(normalizedLocale);
   updateLanguageButtons(normalizedLocale);
-
-  if (persist) {
-    safeSetStoredLocale(normalizedLocale);
-  }
-
-  if (syncUrl) {
-    updateUrlLocale(normalizedLocale);
-  }
-
-  if (brochureEmbedContainer && brochureEmbedContainer.dataset.loaded === 'true') {
-    renderBrochureEmbed(brochureEmbedContainer, true);
-  }
+  if (persist) safeSetStoredLocale(normalizedLocale);
 };
 
-const renderBrochureEmbed = (container, force = false) => {
-  if (!container || (!force && container.dataset.loaded === 'true')) {
-    return;
-  }
-
-  const pdfSrc = container.dataset.pdfSrc;
-  if (!pdfSrc) {
-    return;
-  }
-
-  const copy = translations[currentLocale].embed;
-
-  container.innerHTML = `
-    <object data="${pdfSrc}" type="application/pdf" class="w-full h-[650px] bg-zinc-950">
-      <div class="flex flex-col items-center justify-center h-full p-8 text-center space-y-6">
-        <div class="p-4 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400">
-          <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <div class="space-y-2 max-w-md">
-          <h3 class="text-xl font-semibold text-white">${copy.title}</h3>
-          <p class="text-lg text-zinc-400 leading-relaxed">${copy.description}</p>
-        </div>
-        <a href="${pdfSrc}" download
-          class="px-6 py-3 bg-zinc-100 text-zinc-950 rounded-xl font-semibold text-lg hover:bg-white transition-colors">
-          ${copy.download}
-        </a>
-      </div>
-    </object>
-  `;
-
-  container.dataset.loaded = 'true';
-};
-
-initAnalytics();
-applyLocale(currentLocale, { persist: false, syncUrl: false });
+applyLocale(currentLocale, { persist: false });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const calendlyEventName = 'calendly.event_scheduled';
-
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
-  const lightbox = document.getElementById('image-lightbox');
-  const lightboxImage = document.getElementById('image-lightbox-img');
-  const lightboxClose = document.getElementById('image-lightbox-close');
-  const brochureEmbed = document.querySelector('[data-lazy-pdf]');
-  brochureEmbedContainer = brochureEmbed;
 
   const closeMobileMenu = () => {
-    if (mobileMenu) {
-      mobileMenu.classList.add('hidden');
-    }
+    if (mobileMenu) mobileMenu.classList.add('hidden');
   };
 
   if (menuBtn && mobileMenu) {
@@ -539,11 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
       event.stopPropagation();
       mobileMenu.classList.toggle('hidden');
     });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
+    mobileLinks.forEach(link => { link.addEventListener('click', closeMobileMenu); });
     document.addEventListener('click', event => {
       if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
         closeMobileMenu();
@@ -558,106 +274,95 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const openLightbox = (source, altText) => {
-    if (!lightbox || !lightboxImage) return;
-    lightboxImage.src = source;
-    lightboxImage.alt = altText || '';
-    lightbox.classList.remove('hidden');
-    lightbox.classList.add('flex');
-    document.body.classList.add('overflow-hidden');
-  };
+  const stepFormContainer = document.getElementById('step-form-container');
+  const stepVideoContainer = document.getElementById('step-video-container');
+  const backToFormBtn = document.getElementById('back-to-form-btn');
+  
+  const unifiedForm = document.getElementById('unified-challenge-form');
+  const unifiedError = document.getElementById('unified-error');
+  const unifiedName = document.getElementById('unified-name');
+  const unifiedEmail = document.getElementById('unified-email');
+  const unifiedCompany = document.getElementById('unified-company');
+  const unifiedArea = document.getElementById('unified-area');
+  const unifiedBudget = document.getElementById('unified-budget');
+  const unifiedChallenge = document.getElementById('unified-challenge');
 
-  const closeLightbox = () => {
-    if (!lightbox || !lightboxImage) return;
-    lightbox.classList.add('hidden');
-    lightbox.classList.remove('flex');
-    lightboxImage.src = '';
-    lightboxImage.alt = '';
-    document.body.classList.remove('overflow-hidden');
-  };
+  let calendlyLoaded = false;
 
-  document.querySelectorAll('.js-zoom-image').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      openLightbox(trigger.dataset.fullsrc || '', trigger.dataset.alt || '');
-    });
-  });
+  const loadCalendlyWidget = (prefillData) => {
+    const container = document.getElementById('video-embed-container');
+    const loader = document.getElementById('calendly-loader');
 
-  if (lightboxClose) {
-    lightboxClose.addEventListener('click', closeLightbox);
-  }
-
-  if (lightbox) {
-    lightbox.addEventListener('click', event => {
-      if (event.target === lightbox) {
-        closeLightbox();
+    const hideLoader = () => {
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 300);
       }
-    });
-  }
+    };
 
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-      closeLightbox();
-    }
-  });
-
-  if (brochureEmbed) {
-    if ('IntersectionObserver' in window) {
-      const brochureObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            renderBrochureEmbed(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        rootMargin: '300px 0px',
-        threshold: 0
-      });
-
-      brochureObserver.observe(brochureEmbed);
-    } else {
-      renderBrochureEmbed(brochureEmbed);
-    }
-  }
-
-  window.addEventListener('message', event => {
-    if (!event?.data || typeof event.data !== 'object') return;
-
-    const sourceName = event.origin || '';
-    const isCalendlyMessage = sourceName.includes('calendly.com') || sourceName.includes('calendly');
-    const isScheduledEvent = event.data.event === 'calendly.event_scheduled';
-
-    if (!isCalendlyMessage || !isScheduledEvent) return;
-
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: calendlyEventName,
-      calendly_event_name: 'event_scheduled'
-    });
-  });
-
-  const contactoSection = document.getElementById('contacto');
-
-  if (contactoSection) {
-    const calendlyObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const calendlyCSS = document.createElement('link');
-          calendlyCSS.rel = 'stylesheet';
-          calendlyCSS.href = 'https://assets.calendly.com/assets/external/widget.css';
-          document.head.appendChild(calendlyCSS);
-          const calendlyScript = document.createElement('script');
-          calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
-          calendlyScript.async = true;
-          document.body.appendChild(calendlyScript);
-          observer.unobserve(entry.target);
+    const calendlyConfig = {
+      url: 'https://calendly.com/mpbg-agent/30min?hide_landing_page_details=1&hide_gdpr_banner=1',
+      parentElement: container,
+      prefill: {
+        name: prefillData.name,
+        email: prefillData.email,
+        customAnswers: {
+          a1: prefillData.combinedDetails 
         }
-      });
-    }, {
-      rootMargin: '400px 0px',
-      threshold: 0
-    });
+      }
+    };
 
-    calendlyObserver.observe(contactoSection);
+    if (window.Calendly) {
+      if (!calendlyLoaded) {
+        window.Calendly.initInlineWidget(calendlyConfig);
+        calendlyLoaded = true;
+      }
+      setTimeout(hideLoader, 800);
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.onload = () => {
+        if (container && window.Calendly) {
+          window.Calendly.initInlineWidget(calendlyConfig);
+          calendlyLoaded = true;
+          setTimeout(hideLoader, 800);
+        }
+      };
+      document.body.appendChild(script);
+    }
+  };
+
+  if (unifiedForm) {
+    unifiedForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!unifiedName.value || !unifiedEmail.value || !unifiedCompany.value || !unifiedArea.value || !unifiedBudget.value) {
+        if (unifiedError) unifiedError.classList.remove('hidden');
+        return;
+      }
+      if (unifiedError) unifiedError.classList.add('hidden');
+
+      const combinedDetails = 
+        `Empresa / Cargo: ${unifiedCompany.value} | ` +
+        `Área de Apoyo: ${unifiedArea.value} | ` +
+        `Presupuesto: ${unifiedBudget.value} | ` +
+        `Detalle del Proyecto: ${unifiedChallenge.value || 'N/A'}`;
+
+      stepFormContainer.classList.add('hidden');
+      stepVideoContainer.classList.remove('hidden');
+
+      loadCalendlyWidget({
+        name: unifiedName.value,
+        email: unifiedEmail.value,
+        combinedDetails: combinedDetails
+      });
+    });
+  }
+
+  if (backToFormBtn) {
+    backToFormBtn.addEventListener('click', () => {
+      stepVideoContainer.classList.add('hidden');
+      stepFormContainer.classList.remove('hidden');
+    });
   }
 });

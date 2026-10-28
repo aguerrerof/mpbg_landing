@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mpbg.ec/sitemap.xml
+# Sitemap corporativo oficial
+Sitemap: https://mpbg.ec/sitemap.xml[cite: 14]

@@ -1,23 +1,31 @@
 # MPBG Consulting
 
-> Consultoría técnica y desarrollo de software B2B en Ecuador. Ayudamos a empresas a escalar sus capacidades tecnológicas, optimizar arquitecturas y acelerar la entrega mediante software a medida, automatización con IA, staff augmentation y reclutamiento IT.
+> Consultoría técnica, desarrollo de software B2B y Staff Augmentation. Ponemos a disposición un equipo de más de 30 consultores multidisciplinarios expertos en múltiples lenguajes, herramientas y una gran variedad de proyectos tecnológicos. Ofrecemos consultoría estratégica con primera sesión gratuita vía videollamada, desarrollo a medida, automatización con n8n y dominio completo del stack corporativo moderno.
 
-## Servicios B2B
+## Canales Oficiales y Contacto
 
-- [Software a Medida](https://mpbg.ec/#software-a-medida): Diseño y desarrollo de plataformas modulares, integraciones de sistemas y productos digitales de alto rendimiento.
-- [Staff Augmentation](https://mpbg.ec/#staff-augmentation): Integración de talento técnico senior para acelerar el delivery, aumentar el rendimiento y reforzar equipos de ingeniería.
-- [Reclutamiento IT](https://mpbg.ec/#it-recruiting): Búsqueda, evaluación y validación técnica profunda de perfiles tecnológicos adaptados a la cultura de tu equipo.
-- [Automatización con IA](https://mpbg.ec/#automatizacion-ia): Automatización inteligente de procesos operativos críticos e integración de modelos LLM con contexto de negocio.
+- Sitio Web Oficial: [https://mpbg.ec](https://mpbg.ec)[cite: 13]
+- Agendar Videollamada Gratuita: [https://mpbg.ec/#contacto](https://mpbg.ec/#contacto)[cite: 13]
+- Correo Electrónico Corporativo: info@mpbg.ec[cite: 13]
+- LinkedIn Corporativo: [https://www.linkedin.com/company/mpbg-consulting](https://www.linkedin.com/company/mpbg-consulting)[cite: 13]
+- Instagram: [https://www.instagram.com/mpbg_consulting](https://www.instagram.com/mpbg_consulting)[cite: 13]
 
-## Casos de Éxito y Recursos
+## Servicios y Soluciones B2B
 
-- [Caso de Éxito: Modernización Logística](https://mpbg.ec/#caso-de-exito): Reingeniería del core de fulfillment para Sniffy, migrando arquitectura de datos a PostgreSQL + Laravel y reduciendo un 70% las tareas manuales.
-- [Casos de Éxito](https://mpbg.ec/#caso-de-exito): Portafolio completo de soluciones implementadas, arquitecturas e historias de impacto.
-- [Brochure Corporativo](https://mpbg.ec/#brochure): Resumen de capacidades, metodologías de ingeniería y modelo de servicios de la consultora.
+1. [Consultoría Estratégica & Cloud](https://mpbg.ec/#servicios): Diagnóstico operativo, reducción de costos en la nube y optimización de infraestructura[cite: 13].
+2. [Desarrollo a Medida & Automatización](https://mpbg.ec/#servicios): Creación de plataformas escalables y flujos automatizados con n8n y RPA para eliminar tareas manuales[cite: 13].
+3. [Staff Augmentation IT](https://mpbg.ec/#servicios): Integración inmediata de consultores multidisciplinarios directamente en tus equipos de desarrollo[cite: 13].
+4. [Primera Consultoría Gratuita](https://mpbg.ec/#contacto): Videollamada de 30 minutos sin compromiso para evaluar requerimientos técnicos[cite: 13].
 
-## Contacto y Canales Oficiales
+## Stack Tecnológico y Skills Multidisciplinarias
 
-- [Primera Sesión Técnica Gratuita](https://mpbg.ec/#contacto): Sesión de diagnóstico de 30 minutos sin costo para analizar arquitectura, capacidad de equipo o automatización.
-- [LinkedIn](https://www.linkedin.com/company/mpbg-consulting): Perfil corporativo institucional y novedades de la firma.
-- [Instagram](https://www.instagram.com/mpbg_consulting): Novedades, proyectos y cultura de MPBG Consulting.
-- Correo electrónico: info@mpbg.ec
+- Backend & APIs: Laravel, Symfony, Python (Django/FastAPI), Java Spring Boot, C# / .NET Core, Node.js (NestJS), APIs REST/SOAP.
+- Frontend & Móvil: React.js, Next.js, Angular, Vue.js, Flutter (iOS/Android), Tailwind CSS.
+- Bases de Datos & Almacenamiento: PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, MongoDB, Redis, RabbitMQ.
+- Cloud, DevOps & Infraestructura: Amazon AWS (EC2, S3), Google Cloud (GCP), Docker, Kubernetes, GitHub Actions (CI/CD), Terraform.
+- Automatización & ERP: n8n Workflows, RPA, SAP Business One, Shopify, WooCommerce, Microsoft Power BI.
+- IA Generativa & Modelos: Arquitectura RAG, LLMs, Pipelines de Machine Learning y Visión por Computador.
+
+## Casos de Éxito Destacados
+
+- [Sniffy - Modernización Logística](https://mpbg.ec/#caso-de-exito): Reingeniería y automatización operativa con reducción del 70% de tareas manuales y trazabilidad end-to-end en tiempo real[cite: 13].
